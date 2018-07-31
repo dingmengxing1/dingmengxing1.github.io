@@ -24,7 +24,7 @@
 <meta property="og:image" content="https://i.imgur.com/k0U0Vzv.png">
 <meta property="og:image" content="https://i.imgur.com/r6gXNk3.png">
 <meta property="og:image" content="https://i.imgur.com/0awROcf.png">
-<meta property="og:updated_time" content="2018-07-31T08:37:43.940Z">
+<meta property="og:updated_time" content="2018-07-31T08:56:04.773Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2018.7.17学习笔记">
 <meta name="twitter:description" content="DVWA文件上传漏洞1. 使用Burpsuite: 先将木马的扩展名改成一个正常的扩展名，如jpg 上传时使用Burpsuite拦截数据包，将木马的扩展名改为原来的php,即可绕过客户端的验证。例题：  做法：1.点击浏览，选择一文件 2.打开浏览器设置，使用代理服务器，127.0.0.1   3.然后打开burpsuite，然后在浏览器里点击提交 4.burpsuite抓包后，改变文件的扩展名">
@@ -161,15 +161,20 @@
 <li>然后把包返回给浏览器  <h2 id="Sqlmap下载、安装"><a href="#Sqlmap下载、安装" class="headerlink" title="Sqlmap下载、安装"></a>Sqlmap下载、安装</h2>Sqlmap安装教程网址：<a href="https://jingyan.baidu.com/article/60ccbceb64cc2064cbb19748.html" target="_blank" rel="noopener">Sqlmap安装教程</a>  </li>
 </ul>
 <ol>
-<li>安装Sqlmap<br>下载好的sqlmap，我们将下载的首先解压，然后将目录更改为SQLMap，<br>然后我们将SQLMap复制到Python的安装目录下<br>新建立一个cmd的快捷方式，并命名为叫“SQLMap”<br>右键属性，这里需要修改2个地方，一个是“目标”，一个是“起始位置”，<img src="https://i.imgur.com/k0U0Vzv.png" alt=""></li>
+<li>安装Sqlmap</li>
 </ol>
+<p>下载好的sqlmap，我们将下载的首先解压，然后将目录更改为SQLMap，</p>
+<p>然后我们将SQLMap复制到Python的安装目录下，</p>
+<p>新建立一个cmd的快捷方式，并命名为叫“SQLMap”，</p>
+<p>右键属性，这里需要修改2个地方，一个是“目标”，一个是“起始位置”，</p>
+<p><img src="https://i.imgur.com/k0U0Vzv.png" alt=""></p>
 <p>双击刚才创建的快捷方式，测试下<img src="https://i.imgur.com/r6gXNk3.png" alt=""></p>
 <p>如果出现下列：<br> <img src="https://i.imgur.com/0awROcf.png" alt=""><br><strong>注意：</strong><br>Python必须是python2，如果用户变量里没有python2，上述最后一步操作则不会成功；<br>需要将python2增加到变量里，打开高级系统变量的环境变量，在用户变量里的path里加上python2的路径，并把它置顶。</p>
 <h2 id="OWASP-TOP-10"><a href="#OWASP-TOP-10" class="headerlink" title="OWASP TOP 10"></a>OWASP TOP 10</h2><h3 id="注入"><a href="#注入" class="headerlink" title="注入"></a>注入</h3><p>介绍<br>简单来说,注入往往是应用程序缺少对输入进行安全性检查所引起的,攻击者把一些包含指令的数据发送给解释器,解释器会把收到的数据转换成指令执行。常见的注入包括SQL注入，OS Shell , LDAP , Xpath , Hibernate等等,而其中SQL注入尤为常见。这种攻击所造成的后果往往很大，一般整个数据库的信息都能被读取或篡改,通过SQL注入,攻击者甚至能前够获得更多的包括管理员的权限；<br>危害<br>注入能导致数据丢失或数据破坏、缺乏可审计性或是拒绝服务。注入漏洞有时甚至能导致完全接管主机。</p>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年07月31日 16:37</p>
+        <p>最后更新： 2018年07月31日 16:56</p>
         <p>原始链接： <a class="post-url" href="/2018/07/31/2018-7-17学习笔记/" title="2018.7.17学习笔记">http://yoursite.com/2018/07/31/2018-7-17学习笔记/</a></p>
         <footer>
             <a href="http://yoursite.com">
@@ -286,6 +291,16 @@
     
 
 <nav id="article-nav">
+  
+    <a href="/2018/07/31/python-作业/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          python 作业
+        
+      </span>
+    </a>
   
   
     <a href="/2018/07/31/nihao-hello/" id="article-nav-older" class="article-nav-link-wrap">
