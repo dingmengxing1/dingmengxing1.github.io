@@ -3,23 +3,28 @@
 <head>
   <meta charset="utf-8">
   
-  <title>python---敏感词跳过 | Hexo</title>
+  <title>2018.7.18学习笔记 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="dingmengxing1,dmx's Blog" />
   
-  <meta name="description" content="敏感词跳过题目：读取敏感词文本文件filter.txt,里面存在敏感词，当你输入一段话如果包含敏感字，则用*代替敏感字。     filter.txt文件  黑产，网马，暗链，挖矿     python代码import sys m = [] print(&amp;quot;请输入一段话：&amp;quot;) n = input() with open(&amp;quot;filter.txt&amp;quot;,&amp;quot;r">
-<meta name="keywords" content="python">
+  <meta name="description" content="burp实现弱密码破解 先打开你的burpsuit，浏览器设置为代理服务器（代理：127.0.0.1，端口：8080）    在网上随意找到一个网站，随意输入账号和密码，点击登录  burp抓包成功后，鼠标右击，点击send to Intruder(发送到入侵者)  在Intruder—-Positions中，标记要攻击的位置，选择攻击模式  然后在Intruder—payloads(有效负载)中">
+<meta name="keywords" content="web">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python---敏感词跳过">
-<meta property="og:url" content="http://yoursite.com/2018/08/01/python-敏感词跳过/index.html">
+<meta property="og:title" content="2018.7.18学习笔记">
+<meta property="og:url" content="http://yoursite.com/2018/08/01/2018-7-18学习笔记/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="敏感词跳过题目：读取敏感词文本文件filter.txt,里面存在敏感词，当你输入一段话如果包含敏感字，则用*代替敏感字。     filter.txt文件  黑产，网马，暗链，挖矿     python代码import sys m = [] print(&amp;quot;请输入一段话：&amp;quot;) n = input() with open(&amp;quot;filter.txt&amp;quot;,&amp;quot;r">
+<meta property="og:description" content="burp实现弱密码破解 先打开你的burpsuit，浏览器设置为代理服务器（代理：127.0.0.1，端口：8080）    在网上随意找到一个网站，随意输入账号和密码，点击登录  burp抓包成功后，鼠标右击，点击send to Intruder(发送到入侵者)  在Intruder—-Positions中，标记要攻击的位置，选择攻击模式  然后在Intruder—payloads(有效负载)中">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-08-01T02:01:02.975Z">
+<meta property="og:image" content="https://i.imgur.com/3GRU5Of.png">
+<meta property="og:image" content="https://i.imgur.com/5zEbMnj.png">
+<meta property="og:image" content="https://i.imgur.com/iogKYgb.png">
+<meta property="og:image" content="https://i.imgur.com/E1GJCjq.png">
+<meta property="og:updated_time" content="2018-08-01T02:43:41.678Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python---敏感词跳过">
-<meta name="twitter:description" content="敏感词跳过题目：读取敏感词文本文件filter.txt,里面存在敏感词，当你输入一段话如果包含敏感字，则用*代替敏感字。     filter.txt文件  黑产，网马，暗链，挖矿     python代码import sys m = [] print(&amp;quot;请输入一段话：&amp;quot;) n = input() with open(&amp;quot;filter.txt&amp;quot;,&amp;quot;r">
+<meta name="twitter:title" content="2018.7.18学习笔记">
+<meta name="twitter:description" content="burp实现弱密码破解 先打开你的burpsuit，浏览器设置为代理服务器（代理：127.0.0.1，端口：8080）    在网上随意找到一个网站，随意输入账号和密码，点击登录  burp抓包成功后，鼠标右击，点击send to Intruder(发送到入侵者)  在Intruder—-Positions中，标记要攻击的位置，选择攻击模式  然后在Intruder—payloads(有效负载)中">
+<meta name="twitter:image" content="https://i.imgur.com/3GRU5Of.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -104,14 +109,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-python-敏感词跳过" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-2018-7-18学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      python---敏感词跳过
+      2018.7.18学习笔记
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -133,41 +138,54 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <h2 id="敏感词跳过"><a href="#敏感词跳过" class="headerlink" title="敏感词跳过"></a>敏感词跳过</h2><h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>读取敏感词文本文件filter.txt,里面存在敏感词，当你输入一段话如果包含敏感字，则用*代替敏感字。   </p>
+            <h2 id="burp实现弱密码破解"><a href="#burp实现弱密码破解" class="headerlink" title="burp实现弱密码破解"></a>burp实现弱密码破解</h2><ol>
+<li><p>先打开你的burpsuit，浏览器设置为代理服务器（代理：127.0.0.1，端口：8080）  </p>
+</li>
+<li><p>在网上随意找到一个网站，随意输入账号和密码，点击登录</p>
+</li>
+<li><p>burp抓包成功后，鼠标右击，点击send to Intruder(发送到入侵者)</p>
+</li>
+<li><p>在Intruder—-Positions中，标记要攻击的位置，选择攻击模式</p>
+</li>
+<li><p>然后在Intruder—payloads(有效负载)中，选择每个攻击位置的有效负载(即添加字典)</p>
+</li>
+<li><p>最后点击(最上边一栏)Intruder—-start attack,即开始攻击</p>
+</li>
+</ol>
 <ul>
-<li><h3 id="filter-txt文件"><a href="#filter-txt文件" class="headerlink" title="filter.txt文件"></a>filter.txt文件</h3>  黑产，网马，暗链，挖矿  </li>
+<li><strong>详细操作网址：</strong><a href="https://jingyan.baidu.com/album/ca41422f054c881eae99eda0.html?picindex=2" target="_blank" rel="noopener">https://jingyan.baidu.com/album/ca41422f054c881eae99eda0.html?picindex=2</a></li>
 </ul>
-<ul>
-<li><h3 id="python代码"><a href="#python代码" class="headerlink" title="python代码"></a>python代码</h3><pre><code>import sys
-m = []
-print(&quot;请输入一段话：&quot;)
-n = input()
-with open(&quot;filter.txt&quot;,&quot;r&quot;)as x :
-    s = x.read()
-for i in s:
-    if i == &quot;\n&quot; or i == &quot;，&quot;:
-        pass
-    else:
-        m.append(i)
-for i in n:
-    for j in m:
-        s = 0
-        if i == j:
-            print(&quot;*&quot;,end = &apos;&apos;)
-            s += 1
-            break
-    if s == 0:
-        print(i,end = &apos;&apos;)  
-</code></pre></li>
-</ul>
-<ul>
-<li><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3>  看到这的题时，我们肯定是要把txt文件里的文字，与你输入的话里的字相比较，如果相同，则换掉，在此之前，我们要把逗号去掉。去掉逗号，先定义一个列表，把文件里的元素加入列表里，除了’,’和’/n’除外。<br>  得到列表之后，把列表里的元素与输入的文字相比，相同的，换掉。 </li>
-</ul>
+<h2 id="burpsuit的四种攻击类型"><a href="#burpsuit的四种攻击类型" class="headerlink" title="burpsuit的四种攻击类型"></a>burpsuit的四种攻击类型</h2><ol>
+<li><p>Sniper（狙击手模式）</p>
+<p> 使用一组payload，一次只能用一个payload位置，即最后出来的结果中只会有一组payload，用完</p>
+<p> 字典里所有元素；如果标记了多个位置，则也只会出现一组payload，但里面会包含所有标记位置。</p>
+<ol>
+<li><p>标记了一个位置：</p>
+<p><img src="https://i.imgur.com/3GRU5Of.png" alt=""></p>
+</li>
+<li><p>标记了多个位置：</p>
+<p><img src="https://i.imgur.com/5zEbMnj.png" alt="">    </p>
+</li>
+</ol>
+</li>
+<li><p>Battering ram（攻城锤模式）</p>
+<p>攻城锤模式与狙击手模式类似的地方是，同样只使用一个payload集合，不同的地方在于每次攻击都是替换所有payload标记位置，而狙击手</p>
+<p>模式每次只能替换一个payload标记位置</p>
+</li>
+<li><p>Pitchfork（草叉模式）</p>
+<p>使用多组payload集合，每个标记位置都可以使用不同的payload组，如果有两个位置A和B,则A1对应B1，A2对应B2……An对应Bn。</p>
+<p><img src="https://i.imgur.com/iogKYgb.png" alt=""></p>
+</li>
+<li><p>Cluster bomb（集束炸弹模式）</p>
+<p>使用多组payload集合，与Pitchfork不同的是，如果有两个位置A和B，则A1对应B1…..Bn,A2对应B1……B2,……An对应B1…….Bn。</p>
+<p><img src="https://i.imgur.com/E1GJCjq.png" alt=""></p>
+</li>
+</ol>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年08月01日 10:01</p>
-        <p>原始链接： <a class="post-url" href="/2018/08/01/python-敏感词跳过/" title="python---敏感词跳过">http://yoursite.com/2018/08/01/python-敏感词跳过/</a></p>
+        <p>最后更新： 2018年08月01日 10:43</p>
+        <p>原始链接： <a class="post-url" href="/2018/08/01/2018-7-18学习笔记/" title="2018.7.18学习笔记">http://yoursite.com/2018/08/01/2018-7-18学习笔记/</a></p>
         <footer>
             <a href="http://yoursite.com">
                 <img src="/images/2.png" alt="John Doe">
@@ -224,7 +242,7 @@ for i in n:
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/08/01/python-敏感词跳过/&title=《python---敏感词跳过》 — Hexo&pic=http://yoursite.comimages/2.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/08/01/2018-7-18学习笔记/&title=《2018.7.18学习笔记》 — Hexo&pic=http://yoursite.comimages/2.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -234,22 +252,22 @@ for i in n:
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/08/01/python-敏感词跳过/&title=《python---敏感词跳过》 — Hexo&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/08/01/2018-7-18学习笔记/&title=《2018.7.18学习笔记》 — Hexo&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/08/01/python-敏感词跳过/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/08/01/2018-7-18学习笔记/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《python---敏感词跳过》 — Hexo&url=http://yoursite.com/2018/08/01/python-敏感词跳过/&via=http://yoursite.com" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《2018.7.18学习笔记》 — Hexo&url=http://yoursite.com/2018/08/01/2018-7-18学习笔记/&via=http://yoursite.com" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/08/01/python-敏感词跳过/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/08/01/2018-7-18学习笔记/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -259,7 +277,7 @@ for i in n:
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/08/01/python-敏感词跳过/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/08/01/2018-7-18学习笔记/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -271,7 +289,7 @@ for i in n:
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
-    <a href="/tags/python/" class="color2">python</a>
+    <a href="/tags/web/" class="color4">web</a>
       
   </li>
 
@@ -284,26 +302,16 @@ for i in n:
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#敏感词跳过"><span class="post-toc-text">敏感词跳过</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#题目："><span class="post-toc-text">题目：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#filter-txt文件"><span class="post-toc-text">filter.txt文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#python代码"><span class="post-toc-text">python代码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解题思路"><span class="post-toc-text">解题思路</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#burp实现弱密码破解"><span class="post-toc-text">burp实现弱密码破解</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#burpsuit的四种攻击类型"><span class="post-toc-text">burpsuit的四种攻击类型</span></a></li></ol>
         </nav>
     </aside>
     
 
 <nav id="article-nav">
   
-    <a href="/2018/08/01/2018-7-18学习笔记/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          2018.7.18学习笔记
-        
-      </span>
-    </a>
   
-  
-    <a href="/2018/07/31/2018-7-17学习笔记/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">2018.7.17学习笔记</span>
+    <a href="/2018/08/01/python-敏感词跳过/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">python---敏感词跳过</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
