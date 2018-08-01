@@ -25,7 +25,7 @@
 <meta property="og:image" content="https://i.imgur.com/k0U0Vzv.png">
 <meta property="og:image" content="https://i.imgur.com/GsT2Lfi.png">
 <meta property="og:image" content="https://i.imgur.com/0awROcf.png">
-<meta property="og:updated_time" content="2018-08-01T03:12:22.008Z">
+<meta property="og:updated_time" content="2018-08-01T03:19:53.401Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2018.7.17学习笔记">
 <meta name="twitter:description" content="DVWA文件上传漏洞1. 使用Burpsuite: 先将木马的扩展名改成一个正常的扩展名，如jpg  上传时使用Burpsuite拦截数据包，将木马的扩展名改为原来的php,即可绕过客户端的验证。     例题：  做法 ： 点击浏览，选择一文件     打开浏览器设置，使用代理服务器，127.0.0.1    然后打开burpsuite，然后在浏览器里点击提交  burpsuite抓包后，改变文">
@@ -169,10 +169,7 @@
 </ul>
 <h3 id="2-白名单检测绕过"><a href="#2-白名单检测绕过" class="headerlink" title="2. 白名单检测绕过"></a>2. 白名单检测绕过</h3><ul>
 <li><p><strong>（白名单就是只只能上传规定后缀的文件，主要利用截断上传绕过，0x00截断与%00截断）</strong></p>
-<p>0x00截断是将上传文件名或路径名中使用ascii码值为0的字符（也就是null）来进行截断。多用在路径和文件名截断中； %00一般用在URL中</p>
-<p>用于截断url来进行文件包含，两者原理都一样，都是ascll为0的字符，只是形式不同而已； 在上传的时候，当文件系统读到【0x00】时，会认</p>
-<p>为文件已经结束。利用00截断就是利用程序员在写程序时对文件的上传路径过滤不严格，产生0x00上传截断漏洞； 通过抓包截断将</p>
-<p>【evil.php.jpg】后面的一个【.】换成【0x00】。在上传的时候，当文件系统读到【0x00】时，会认为文件已经结束，从而将【evil.php.jpg】</p>
+<p>0x00截断是将上传文件名或路径名中使用ascii码值为0的字符（也就是null）来进行截断。多用在路径和文件名截断中； %00一般用在URL中用于截断url来进行文件包含，两者原理都一样，都是ascll为0的字符，只是形式不同而已； 在上传的时候，当文件系统读到【0x00】时，会认为文件已经结束。利用00截断就是利用程序员在写程序时对文件的上传路径过滤不严格，产生0x00上传截断漏洞； 通过抓包截断将【evil.php.jpg】后面的一个【.】换成【0x00】。在上传的时候，当文件系统读到【0x00】时，会认为文件已经结束，从而将【evil.php.jpg】</p>
 <p>的内容写入到【evil.php】中，从而达到攻击的目的。  </p>
 </li>
 </ul>
@@ -197,16 +194,16 @@
 </ul>
 <ul>
 <li><p>然后点击Hex，在横线的那一行，php后的ascii码值改为00）</p>
-<ul>
+<ol>
 <li><p>返回Raw，检查上一步在Uplads后加1.phpphp.jpg中，第一个php后是否改变</p>
 </li>
 <li><p>然后把包返回给浏览器  </p>
 </li>
-</ul>
+</ol>
 </li>
 </ul>
 <h2 id="Sqlmap下载、安装"><a href="#Sqlmap下载、安装" class="headerlink" title="Sqlmap下载、安装"></a>Sqlmap下载、安装</h2><ul>
-<li>Sqlmap安装教程网址：<a href="https://jingyan.baidu.com/article/60ccbceb64cc2064cbb19748.html" target="_blank" rel="noopener">Sqlmap安装教程</a>  </li>
+<li><strong>Sqlmap安装教程网址：</strong><a href="https://jingyan.baidu.com/article/60ccbceb64cc2064cbb19748.html" target="_blank" rel="noopener">Sqlmap安装教程</a>  </li>
 </ul>
 <ul>
 <li><p><strong>安装Sqlmap</strong></p>
@@ -228,8 +225,10 @@
 </li>
 </ul>
 <ul>
-<li><p><strong>注意：</strong><br>Python必须是python2，如果用户变量里没有python2，上述最后一步操作则不会成功；</p>
-<p>需要将python2增加到变量里，打开高级系统变量的环境变量，在用户变量里的path里加上python2的路径，并把它置顶。</p>
+<li><strong>注意：</strong>  <ol>
+<li>Python必须是python2，如果用户变量里没有python2，上述最后一步操作则不会成功；</li>
+<li>需要将python2增加到变量里，打开高级系统变量的环境变量，在用户变量里的path里加上python2的路径，并把它置顶。</li>
+</ol>
 </li>
 </ul>
 <h2 id="OWASP-TOP-10"><a href="#OWASP-TOP-10" class="headerlink" title="OWASP TOP 10"></a>OWASP TOP 10</h2><h3 id="注入"><a href="#注入" class="headerlink" title="注入"></a>注入</h3><ul>
@@ -241,7 +240,7 @@
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年08月01日 11:12</p>
+        <p>最后更新： 2018年08月01日 11:19</p>
         <p>原始链接： <a class="post-url" href="/2018/07/31/2018-7-17学习笔记/" title="2018.7.17学习笔记">http://yoursite.com/2018/07/31/2018-7-17学习笔记/</a></p>
         <footer>
             <a href="http://yoursite.com">
