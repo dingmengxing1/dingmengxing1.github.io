@@ -21,7 +21,7 @@
 <meta property="og:image" content="https://i.imgur.com/zIzRI3o.png">
 <meta property="og:image" content="https://i.imgur.com/GIFhOki.png">
 <meta property="og:image" content="https://i.imgur.com/YjiuMN7.png">
-<meta property="og:updated_time" content="2018-08-01T08:19:41.819Z">
+<meta property="og:updated_time" content="2018-08-01T08:23:13.342Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2018.7.20学习笔记">
 <meta name="twitter:description" content="php $GLOBALS  可以获得当前页面里的全部变量。  $_SERVER  是一个包含了诸如头信息(header)、路径(path)、以及脚本位置(script locations)等等信息的数组。  $_FILES  获取上传文件的信息   $_GET URL (统一资源定位符 )方式传递数据   说明：其实就是浏览器的地址栏传递方式，   传递方式：URL 地址?参数 1=值 1&amp;amp">
@@ -186,8 +186,8 @@
 <p> 相同；</p>
 <p> 而    <code>else if (sha1($_GET[&#39;name&#39;]) === sha1($_GET[&#39;password&#39;]))
    die(&#39;Flag: &#39;.$flag);</code></p>
-<p> 这一句的意思是name和password的值在用哈西算法编码后值相等，然而每一个消息在经过哈希算法编码之后，都会得到唯一的一一对应的消</p>
-<p> 息摘要，所以只两消息值不相等，那么经过哈希算法后，得到的消息摘要一定不等；</p>
+<p> 这一句的意思是name和password的值在用哈西算法编码后值相等，然而每一个消息在经过哈希算法编码之后，都会得到</p>
+<p> 唯一的一一对应的消息摘要，所以只两消息值不相等，那么经过哈希算法后，得到的消息摘要一定不等；</p>
 <p> 上面两句话结合，仿佛是矛盾的，但是哈希算法有个漏洞，它不能用于数组，如果消息是数组，则会返回错误，所以如果name和password的</p>
 <p> 值是两个不同的数组，则它俩不等，然而经过sha1()函数后返回的值都是错误，则错误与错误相同，所以应当在地址栏里加入？</p>
 <p> name[]=a&amp;password[]=b,</p>
@@ -205,7 +205,7 @@
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年08月01日 16:19</p>
+        <p>最后更新： 2018年08月01日 16:23</p>
         <p>原始链接： <a class="post-url" href="/2018/08/01/2018-7-20学习笔记/" title="2018.7.20学习笔记">http://yoursite.com/2018/08/01/2018-7-20学习笔记/</a></p>
         <footer>
             <a href="http://yoursite.com">
