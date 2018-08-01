@@ -1,13 +1,113 @@
 <!DOCTYPE html>
-<html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.3.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
   
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-    <meta name="keywords" content="dingmengxing1,dmx's Blog" />
-  
+
+
+
+
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/index.html">
@@ -15,608 +115,1500 @@
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
-  
-  
-    <link rel="icon" href="/favicon.ico">
-  
-  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/style.css">
-  <script src="/js/pace.min.js"></script>
-  <!--love.js-->
-  <script type="text/javascript" src="love.js"></script>
 
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Hexo</title>
   
-  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
 
 </head>
 
-<body>
-  <div id="container">
-      <header id="header">
-    <div id="banner"></div>
-    <div id="header-outer">
-        <div id="header-menu" class="header-menu-pos animated">
-            <div class="header-menu-container">
-                <a href="/" class="left">
-                    <span class="site-title">dmx&#39;s Blog</span>
-                </a>
-                <nav id="header-menu-nav" class="right">
-                    
-                    <a  href="/">
-                        <i class="fa fa-home"></i>
-                        <span>主页</span>
-                    </a>
-                    
-                    <a  href="/archives">
-                        <i class="fa fa-archive"></i>
-                        <span>blog</span>
-                    </a>
-                    
-                    <a  href="/about">
-                        <i class="fa fa-user"></i>
-                        <span>我</span>
-                    </a>
-                    
-                </nav>
-                <a class="mobile-header-menu-button">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
-        </div>
-        <div id="header-row">
-            <div id="logo">
-                <a href="/">
-                    <img src="/images/2.png" alt="logo">
-                </a>
-            </div>
-            <div class="header-info">
-                <div id="header-title">
-                    
-                    <h2>
-                        dmx&#39;s Blog
-                    </h2>
-                    
-                </div>
-                <div id="header-description">
-                    
-                    <h3>
-                        一个刚接触计算机行业的小菜鸟
-                    </h3>
-                    
-                </div>
-            </div>
-            <nav class="header-nav">
-                <div class="social">
-                    
-                        <a title="Github" target="_blank" href="//github.com">
-                            <i class="fa fa-github fa-2x"></i></a>
-                    
-                        <a title="微博" target="_blank" href="//weibo.com">
-                            <i class="fa fa-weibo fa-2x"></i></a>
-                    
-                </div>
-            </nav>
-        </div>
-    </div>
-</header>
-      <div class="outer">
-        <section id="main" class="body-wrap">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
   
-    <article id="post-2018-7-20学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/01/2018-7-20学习笔记/"  >2018.7.20学习笔记</a>
-    </h1>
   
 
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
           
-      </header>
-    
-    <div class="article-entry " itemprop="articleBody">
-      
-        <div class="article-img">
-            <a href="/2018/08/01/2018-7-20学习笔记/" >
-                
-                <img src="http://yoursite.com/images/banner.jpg" alt="2018.7.20学习笔记" title="2018.7.20学习笔记">
-                
-            </a>
-        </div>
-        <div class="article-feed">
-            <p>
-                php
-$GLOBALS 
-可以获得当前页面里的全部变量。
-
-$_SERVER 
-是一个包含了诸如头信息(header)、路径(path)、以及脚本位置(script locations)等等信息的数组。
-
-$_FILES 
-获取上传文件的信息 
-
-$_GET
-URL (统一资源定位符 )方式传递数据 
-
-说明：其实就是浏览器的地址栏传递方式， 
-
-传递方式：URL 地址...
-            </p>
-        </div>
-      
+          <li class="menu-item menu-item-home menu-item-active">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
         
-    </div>
-    <footer class="article-footer">
         
-        <ul class="article-footer-menu">
-            
-                <li><i class="fa fa-calendar"></i>2018-08-01</li>
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/web笔记/" class="color1">web笔记</a>
-      
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
   </li>
 
-        </ul>
-        
-            <a href="/2018/08/01/2018-7-20学习笔记/#more" class="article-more-link" >阅读全文&gt;&gt;</a>
-        
-    </footer>
-  </div>
-</article>
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
 
 
   
-    <article id="post-2018-7-19学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
+
+
+
+</div>
+    </header>
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/01/2018-7-19学习笔记/"  >2018.7.19学习笔记</a>
-    </h1>
-  
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
 
           
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/01/2018-7-20学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/01/2018-7-20学习笔记/" itemprop="url">
+                  2018.7.20学习笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-01 16:00:19 / 修改时间：16:29:57" itemprop="dateCreated datePublished" datetime="2018-08-01T16:00:19+08:00">2018-08-01</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry " itemprop="articleBody">
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <div class="article-img">
-            <a href="/2018/08/01/2018-7-19学习笔记/" >
+      
+
+      
+        
+          
+            <h2 id="php"><a href="#php" class="headerlink" title="php"></a>php</h2><ol>
+<li><p>$GLOBALS </p>
+<p>可以获得当前页面里的全部变量。</p>
+</li>
+<li><p>$_SERVER </p>
+<p>是一个包含了诸如头信息(header)、路径(path)、以及脚本位置(script locations)等等信息的数组。</p>
+</li>
+<li><p>$_FILES </p>
+<p>获取上传文件的信息 </p>
+</li>
+<li><p>$_GET</p>
+<p>URL (统一资源定位符 )方式传递数据 </p>
+<ul>
+<li><p>说明：其实就是浏览器的地址栏传递方式， </p>
+</li>
+<li><p>传递方式：URL 地址<strong>?</strong>参数 1=值 1&amp;参数 2=值2…………………………… </p>
+</li>
+<li><p>传递形式：表单的 get 方式和超链接方式 </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&amp;lt?php</span><br><span class="line">if (isset($_GET[&apos;name&apos;]) and isset($_GET[&apos;password&apos;])) &#123;</span><br><span class="line">    if ($_GET[&apos;name&apos;] == $_GET[&apos;password&apos;])</span><br><span class="line">        echo &apos;&lt;p&gt;Your password can not be your name!&lt;/p&gt;&apos;;</span><br><span class="line">    else if (sha1($_GET[&apos;name&apos;]) === sha1($_GET[&apos;password&apos;]))</span><br><span class="line">      die(&apos;Flag: &apos;.$flag);</span><br><span class="line">    else</span><br><span class="line">        echo &apos;&lt;p&gt;Invalid password.&lt;/p&gt;&apos;;</span><br><span class="line">&#125;</span><br><span class="line">else&#123;</span><br><span class="line">	echo &apos;&lt;p&gt;Login first!&lt;/p&gt;&apos;;</span><br><span class="line">?&amp;gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="web试题"><a href="#web试题" class="headerlink" title="web试题"></a>web试题</h2><ol>
+<li><p>robots了解一下</p>
+<p> <img src="https://i.imgur.com/w8idLJP.png" alt=""></p>
+<p><img src="https://i.imgur.com/y0FANHC.png" alt=""></p>
+<p> 这道题就是查找robots在网页的路径，在地址栏里域的根目录里后面加上robots.txt,即可查找robots，注意，robots.txt必须加到域的根目录后，不能加到子目录里。</p>
+<ul>
+<li><p>正确加上：<a href="http://www.wechall.net/robots.txt" target="_blank" rel="noopener">www.wechall.net/robots.txt</a></p>
+</li>
+<li><p>错误加上：<a href="http://www.wechall.net/challenge/training/www/robots/index.php/robots.txt" target="_blank" rel="noopener">www.wechall.net/challenge/training/www/robots/index.php/robots.txt</a><br>加上之后运行，结果：</p>
+</li>
+</ul>
+<p><img src="https://i.imgur.com/zIzRI3o.png" alt=""></p>
+<p>上述图片里的T0PS3CR3T就是答案。</p>
+</li>
+<li><p>php代码审计</p>
+<p><img src="https://i.imgur.com/GIFhOki.png" alt=""></p>
+<p><img src="https://i.imgur.com/YjiuMN7.png" alt=""></p>
+<p>根据题目，我们先查看一下源代码，发现了源代码中出现了这样一串php代码：</p>
+<p>这串代码的意思是要往浏览器的地址栏里传递name和password，而`if ($_GET[‘name’] == $_GET[‘password’])</p>
+<pre><code>echo &apos;&lt;p&gt;Your password can not be your name!&lt;/p&gt;&apos;;
+</code></pre><p>   这一句的意思是如果我们输入的name和password是相同的，则输出“Your password can not be your name!”，所以password和name的值不</p>
+<p> 相同；</p>
+<p> 而    <code>else if (sha1($_GET[&#39;name&#39;]) === sha1($_GET[&#39;password&#39;]))
+   die(&#39;Flag: &#39;.$flag);</code></p>
+<p> 这一句的意思是name和password的值在用哈西算法编码后值相等，然而每一个消息在经过哈希算法编码之后，都会得到</p>
+<p> 唯一的一一对应的消息摘要，所以只两消息值不相等，那么经过哈希算法后，得到的消息摘要一定不等；上面两句话结</p>
+<p> 合，仿佛是矛盾的，但是哈希算法有个漏洞，它不能用于数组，如果消息是数组，则会返回错误，所以如果name和</p>
+<p> password的值是两个不同的数组，则它俩不等，然而经过sha1()函数后返回的值都是错误，则错误与错误相同，所以应</p>
+<p> 当在地址栏里加入？name[]=a&amp;password[]=b,则可以得到flag。</p>
+<ul>
+<li><p>sha1()详细可见<a href="http://www.w3school.com.cn/php/func_string_sha1.asp" target="_blank" rel="noopener">sha1函数</a></p>
+</li>
+<li><p>哈希算法详见<a href="https://baike.baidu.com/item/SHA1/8812671?fr=aladdin" target="_blank" rel="noopener">安全哈希算法</a></p>
+</li>
+<li><p>$_GET：其实就是浏览器的地址栏传递方式， 传递方式：URL 地址?参数 1=值 1&amp;参数 2=值2……………………………</p>
+</li>
+</ul>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/01/2018-7-19学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
                 
-                <img src="http://yoursite.com/images/banner.jpg" alt="2018.7.19学习笔记" title="2018.7.19学习笔记">
+                <a class="post-title-link" href="/2018/08/01/2018-7-19学习笔记/" itemprop="url">
+                  2018.7.19学习笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
                 
-            </a>
+              
+
+              <time title="创建时间：2018-08-01 13:48:27 / 修改时间：15:58:31" itemprop="dateCreated datePublished" datetime="2018-08-01T13:48:27+08:00">2018-08-01</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
-        <div class="article-feed">
-            <p>
-                网站语言代码
-en-gb
-英语英国
+      </header>
+    
 
-en-US
-英语美国
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-zh-cn
-简体中文
+      
+      
 
-zh-tw
-繁体中文
-
-
-html 基础
-标题html中的标题是用h1、h2、h3、h4、h5、h6这些标签来定义的；
-
-格式： 
-&lt;h1&gt;这是一个标题&lt;/h1&gt;
+      
+        
+          
+            <h2 id="网站语言代码"><a href="#网站语言代码" class="headerlink" title="网站语言代码"></a>网站语言代码</h2><ol>
+<li><p><strong>en-gb</strong></p>
+<p>英语英国</p>
+</li>
+<li><p><strong>en-US</strong></p>
+<p>英语美国</p>
+</li>
+<li><p><strong>zh-cn</strong></p>
+<p>简体中文</p>
+</li>
+<li><p><strong>zh-tw</strong></p>
+<p>繁体中文</p>
+</li>
+</ol>
+<h2 id="html-基础"><a href="#html-基础" class="headerlink" title="html 基础"></a>html 基础</h2><ol>
+<li><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>html中的标题是用h1、h2、h3、h4、h5、h6这些标签来定义的；</p>
+<ul>
+<li><p>格式： </p>
+<pre><code>&lt;h1&gt;这是一个标题&lt;/h1&gt;
 &lt;h2&gt;这是一个标题&lt;/h2&gt;
-&lt;h3&gt;这是一个标题&lt;/h...
-            </p>
-        </div>
-      
-        
-    </div>
-    <footer class="article-footer">
-        
-        <ul class="article-footer-menu">
-            
-                <li><i class="fa fa-calendar"></i>2018-08-01</li>
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/web笔记/" class="color1">web笔记</a>
-      
-  </li>
+&lt;h3&gt;这是一个标题&lt;/h3&gt;
+&lt;h4&gt;这是一个标题&lt;/h4&gt;
+&lt;h5&gt;这是一个标题&lt;/h5&gt;
+&lt;h6&gt;这是一个标题&lt;/h6&gt;
+</code></pre></li>
+<li><p>出来的结果：</p>
+</li>
+</ul>
+<p></p><h1>这是一个标题</h1><br><h2>这是一个标题</h2><br><h3>这是一个标题</h3><br><h4>这是一个标题</h4><br><h5>这是一个标题</h5><p></p>
+<h6>这是一个标题</h6>
 
-        </ul>
-        
-            <a href="/2018/08/01/2018-7-19学习笔记/#more" class="article-more-link" >阅读全文&gt;&gt;</a>
-        
-    </footer>
-  </div>
-</article>
-
-
-  
-    <article id="post-2018-7-18学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/01/2018-7-18学习笔记/"  >2018.7.18学习笔记</a>
-    </h1>
-  
-
-          
-      </header>
-    
-    <div class="article-entry " itemprop="articleBody">
-      
-        <div class="article-img">
-            <a href="/2018/08/01/2018-7-18学习笔记/" >
-                
-                <img src="http://yoursite.com/images/banner.jpg" alt="2018.7.18学习笔记" title="2018.7.18学习笔记">
-                
-            </a>
-        </div>
-        <div class="article-feed">
-            <p>
-                burp实现弱密码破解
-先打开你的burpsuit，浏览器设置为代理服务器（代理：127.0.0.1，端口：8080）  
-
-在网上随意找到一个网站，随意输入账号和密码，点击登录
-
-burp抓包成功后，鼠标右击，点击send to Intruder(发送到入侵者)
-
-在Intruder—-Positions中，标记要攻击的位置，选择攻击模式
-
-然后在Intruder—pa...
-            </p>
-        </div>
-      
-        
-    </div>
-    <footer class="article-footer">
-        
-        <ul class="article-footer-menu">
-            
-                <li><i class="fa fa-calendar"></i>2018-08-01</li>
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/web/" class="color4">web</a>
-      
-  </li>
-
-        </ul>
-        
-            <a href="/2018/08/01/2018-7-18学习笔记/#more" class="article-more-link" >阅读全文&gt;&gt;</a>
-        
-    </footer>
-  </div>
-</article>
-
-
-  
-    <article id="post-python-敏感词跳过" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/01/python-敏感词跳过/"  >python---敏感词跳过</a>
-    </h1>
-  
+<ol start="2">
+<li><h3 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h3>html中的段落是用p标签来定义的；</li>
+</ol>
+<ul>
+<li>格式：</li>
+</ul>
+<p><code>&lt;p&gt;易烊千玺&lt;/p&gt;</code></p>
+<ul>
+<li><p>出来的结果是：</p>
+ <p>易烊千玺</p></li>
+</ul>
+<ol start="3">
+<li><h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3></li>
+</ol>
+<p>链接在html里是用a来定义的：</p>
+<ul>
+<li>格式：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;https://mp.csdn.net/mdeditor/81115180&quot;&gt;编辑文章&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>出来的结果：</li>
+</ul>
+<p><a href="https://mp.csdn.net/mdeditor/81115180" target="_blank" rel="noopener">编辑文章</a></p>
+<ul>
+<li>补充：href属性是用来规定链接的目标，即这个链接的网址。</li>
+</ul>
+<ol start="4">
+<li><h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3></li>
+</ol>
+<p>html中的图片是img来定义的：</p>
+<ul>
+<li>格式：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;img src=&quot;/images/logo.png&quot; width=&quot;258&quot; height=&quot;39&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>结果是：</li>
+</ul>
+<p><img src="https://i.imgur.com/pM3y65R.png" alt=""></p>
+<ul>
+<li><p><strong>注意：</strong></p>
+<ul>
+<li><p>src属性是用来引用该途径的路径。</p>
+</li>
+<li><p>图片的名称和尺寸要和图片的属性想同。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="html的一些标签"><a href="#html的一些标签" class="headerlink" title="html的一些标签 "></a>html的一些标签 </h2><ol>
+<li><p>html</p>
+<p>定义html文档</p>
+<p>格式：</p>
+<p><img src="https://i.imgur.com/1tMr3ty.png" alt=""></p>
+</li>
+<li><p>head<br>所有头部元素的容器；</p>
+<p>必须包含文档的标题（title），可以包含脚本、样式、meta 信息 以及其他更多的信息。</p>
+<p>格式：</p>
+<p><img src="https://i.imgur.com/VtIP49K.png" alt=""></p>
+<ul>
+<li><p>meta：通常用于指定网页的描述，关键词，文件的最后修改时间，作者及其他元数据。</p>
+<p> 例如：</p>
+<p> <img src="https://i.imgur.com/gFvZxhQ.png" alt=""></p>
+</li>
+<li><p>title：定义在浏览器中工具栏、在搜索引擎结果中的页面、被添加到收藏夹时的标题(必须要有)</p>
+</li>
+<li>base:为页面上的所有的相对链接规定默认 URL 或默认目标。</li>
+</ul>
+</li>
+</ol>
 
           
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/01/2018-7-18学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/01/2018-7-18学习笔记/" itemprop="url">
+                  2018.7.18学习笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-01 10:28:31 / 修改时间：10:43:41" itemprop="dateCreated datePublished" datetime="2018-08-01T10:28:31+08:00">2018-08-01</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry " itemprop="articleBody">
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <div class="article-img">
-            <a href="/2018/08/01/python-敏感词跳过/" >
+      
+
+      
+        
+          
+            <h2 id="burp实现弱密码破解"><a href="#burp实现弱密码破解" class="headerlink" title="burp实现弱密码破解"></a>burp实现弱密码破解</h2><ol>
+<li><p>先打开你的burpsuit，浏览器设置为代理服务器（代理：127.0.0.1，端口：8080）  </p>
+</li>
+<li><p>在网上随意找到一个网站，随意输入账号和密码，点击登录</p>
+</li>
+<li><p>burp抓包成功后，鼠标右击，点击send to Intruder(发送到入侵者)</p>
+</li>
+<li><p>在Intruder—-Positions中，标记要攻击的位置，选择攻击模式</p>
+</li>
+<li><p>然后在Intruder—payloads(有效负载)中，选择每个攻击位置的有效负载(即添加字典)</p>
+</li>
+<li><p>最后点击(最上边一栏)Intruder—-start attack,即开始攻击</p>
+</li>
+</ol>
+<ul>
+<li><strong>详细操作网址：</strong><a href="https://jingyan.baidu.com/album/ca41422f054c881eae99eda0.html?picindex=2" target="_blank" rel="noopener">https://jingyan.baidu.com/album/ca41422f054c881eae99eda0.html?picindex=2</a></li>
+</ul>
+<h2 id="burpsuit的四种攻击类型"><a href="#burpsuit的四种攻击类型" class="headerlink" title="burpsuit的四种攻击类型"></a>burpsuit的四种攻击类型</h2><ol>
+<li><p>Sniper（狙击手模式）</p>
+<p> 使用一组payload，一次只能用一个payload位置，即最后出来的结果中只会有一组payload，用完</p>
+<p> 字典里所有元素；如果标记了多个位置，则也只会出现一组payload，但里面会包含所有标记位置。</p>
+<ol>
+<li><p>标记了一个位置：</p>
+<p><img src="https://i.imgur.com/3GRU5Of.png" alt=""></p>
+</li>
+<li><p>标记了多个位置：</p>
+<p><img src="https://i.imgur.com/5zEbMnj.png" alt="">    </p>
+</li>
+</ol>
+</li>
+<li><p>Battering ram（攻城锤模式）</p>
+<p>攻城锤模式与狙击手模式类似的地方是，同样只使用一个payload集合，不同的地方在于每次攻击都是替换所有payload标记位置，而狙击手</p>
+<p>模式每次只能替换一个payload标记位置</p>
+</li>
+<li><p>Pitchfork（草叉模式）</p>
+<p>使用多组payload集合，每个标记位置都可以使用不同的payload组，如果有两个位置A和B,则A1对应B1，A2对应B2……An对应Bn。</p>
+<p><img src="https://i.imgur.com/iogKYgb.png" alt=""></p>
+</li>
+<li><p>Cluster bomb（集束炸弹模式）</p>
+<p>使用多组payload集合，与Pitchfork不同的是，如果有两个位置A和B，则A1对应B1…..Bn,A2对应B1……B2,……An对应B1…….Bn。</p>
+<p><img src="https://i.imgur.com/E1GJCjq.png" alt=""></p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/01/python-敏感词跳过/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
                 
-                <img src="http://yoursite.com/images/banner.jpg" alt="python---敏感词跳过" title="python---敏感词跳过">
+                <a class="post-title-link" href="/2018/08/01/python-敏感词跳过/" itemprop="url">
+                  python---敏感词跳过
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
                 
-            </a>
+              
+
+              <time title="创建时间：2018-08-01 08:07:49 / 修改时间：10:01:02" itemprop="dateCreated datePublished" datetime="2018-08-01T08:07:49+08:00">2018-08-01</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
         </div>
-        <div class="article-feed">
-            <p>
-                敏感词跳过题目：读取敏感词文本文件filter.txt,里面存在敏感词，当你输入一段话如果包含敏感字，则用*代替敏感字。   
+      </header>
+    
 
-filter.txt文件  黑产，网马，暗链，挖矿  
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
+      
+      
 
-python代码import sys
+      
+        
+          
+            <h2 id="敏感词跳过"><a href="#敏感词跳过" class="headerlink" title="敏感词跳过"></a>敏感词跳过</h2><h3 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h3><p>读取敏感词文本文件filter.txt,里面存在敏感词，当你输入一段话如果包含敏感字，则用*代替敏感字。   </p>
+<ul>
+<li><h3 id="filter-txt文件"><a href="#filter-txt文件" class="headerlink" title="filter.txt文件"></a>filter.txt文件</h3>  黑产，网马，暗链，挖矿  </li>
+</ul>
+<ul>
+<li><h3 id="python代码"><a href="#python代码" class="headerlink" title="python代码"></a>python代码</h3><pre><code>import sys
 m = []
 print(&quot;请输入一段话：&quot;)
 n = input()
-with open(&quot;filter.txt&...
-            </p>
-        </div>
-      
-        
-    </div>
-    <footer class="article-footer">
-        
-        <ul class="article-footer-menu">
-            
-                <li><i class="fa fa-calendar"></i>2018-08-01</li>
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/python/" class="color2">python</a>
-      
-  </li>
-
-        </ul>
-        
-            <a href="/2018/08/01/python-敏感词跳过/#more" class="article-more-link" >阅读全文&gt;&gt;</a>
-        
-    </footer>
-  </div>
-</article>
-
-
-  
-    <article id="post-2018-7-17学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/31/2018-7-17学习笔记/"  >2018.7.17学习笔记</a>
-    </h1>
-  
+with open(&quot;filter.txt&quot;,&quot;r&quot;)as x :
+    s = x.read()
+for i in s:
+    if i == &quot;\n&quot; or i == &quot;，&quot;:
+        pass
+    else:
+        m.append(i)
+for i in n:
+    for j in m:
+        s = 0
+        if i == j:
+            print(&quot;*&quot;,end = &apos;&apos;)
+            s += 1
+            break
+    if s == 0:
+        print(i,end = &apos;&apos;)  
+</code></pre></li>
+</ul>
+<ul>
+<li><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3>  看到这的题时，我们肯定是要把txt文件里的文字，与你输入的话里的字相比较，如果相同，则换掉，在此之前，我们要把逗号去掉。去掉逗号，先定义一个列表，把文件里的元素加入列表里，除了’,’和’/n’除外。<br>  得到列表之后，把列表里的元素与输入的文字相比，相同的，换掉。 </li>
+</ul>
 
           
-      </header>
-    
-    <div class="article-entry " itemprop="articleBody">
-      
-        <div class="article-img">
-            <a href="/2018/07/31/2018-7-17学习笔记/" >
-                
-                <img src="http://yoursite.com/images/banner.jpg" alt="2018.7.17学习笔记" title="2018.7.17学习笔记">
-                
-            </a>
-        </div>
-        <div class="article-feed">
-            <p>
-                DVWA文件上传漏洞1. 使用Burpsuite:
-先将木马的扩展名改成一个正常的扩展名，如jpg
-
-上传时使用Burpsuite拦截数据包，将木马的扩展名改为原来的php,即可绕过客户端的验证。  
-
-
-例题：
-
-做法 ：
-点击浏览，选择一文件
-  
-
-打开浏览器设置，使用代理服务器，127.0.0.1  
-
-然后打开burpsuite，然后在浏览器里点击提交
-
-bur...
-            </p>
-        </div>
-      
         
+      
     </div>
-    <footer class="article-footer">
-        
-        <ul class="article-footer-menu">
-            
-                <li><i class="fa fa-calendar"></i>2018-07-31</li>
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/web/" class="color4">web</a>
-      
-  </li>
 
-        </ul>
-        
-            <a href="/2018/07/31/2018-7-17学习笔记/#more" class="article-more-link" >阅读全文&gt;&gt;</a>
-        
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
     </footer>
   </div>
-</article>
-
-
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+  
+  </article>
+
+
     
-      <header class="article-header">
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/31/2018-7-17学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/31/hello-world/"  >Hello World</a>
-    </h1>
-  
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/31/2018-7-17学习笔记/" itemprop="url">
+                  2018.7.17学习笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-07-31 16:25:44" itemprop="dateCreated datePublished" datetime="2018-07-31T16:25:44+08:00">2018-07-31</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-08-01 11:19:53" itemprop="dateModified" datetime="2018-08-01T11:19:53+08:00">2018-08-01</time>
+              
+            
+          </span>
 
           
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
       </header>
     
-    <div class="article-entry " itemprop="articleBody">
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <div class="article-img">
-            <a href="/2018/07/31/hello-world/" >
-                
-                <img src="http://yoursite.com/images/banner.jpg" alt="Hello World" title="Hello World">
-                
-            </a>
-        </div>
-        <div class="article-feed">
-            <p>
-                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on ...
-            </p>
-        </div>
+      
+
       
         
+          
+            <h2 id="DVWA文件上传漏洞"><a href="#DVWA文件上传漏洞" class="headerlink" title="DVWA文件上传漏洞"></a>DVWA文件上传漏洞</h2><h3 id="1-使用Burpsuite"><a href="#1-使用Burpsuite" class="headerlink" title="1. 使用Burpsuite:"></a>1. 使用Burpsuite:</h3><ul>
+<li><p>先将木马的扩展名改成一个正常的扩展名，如jpg</p>
+</li>
+<li><p>上传时使用Burpsuite拦截数据包，将木马的扩展名改为原来的php,即可绕过客户端的验证。  </p>
+</li>
+</ul>
+<p><strong>例题：</strong><br><img src="https://i.imgur.com/FR2D6y9.png" alt=""></p>
+<ul>
+<li><h3 id="做法-："><a href="#做法-：" class="headerlink" title="做法 ："></a>做法 ：</h3><ol>
+<li><p>点击浏览，选择一文件</p>
+<p><img src="https://i.imgur.com/teYqQxK.png" alt="">  </p>
+</li>
+<li><p>打开浏览器设置，使用代理服务器，127.0.0.1  </p>
+</li>
+<li><p>然后打开burpsuite，然后在浏览器里点击提交</p>
+</li>
+<li><p>burpsuite抓包后，改变文件的扩展名  </p>
+<p><img src="https://i.imgur.com/JQl2vEt.png" alt=""></p>
+</li>
+<li><p>在上图中的1中把文件的扩展名改为php，然后点击2的forward，把东西返给浏览器。  </p>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="2-白名单检测绕过"><a href="#2-白名单检测绕过" class="headerlink" title="2. 白名单检测绕过"></a>2. 白名单检测绕过</h3><ul>
+<li><p><strong>（白名单就是只只能上传规定后缀的文件，主要利用截断上传绕过，0x00截断与%00截断）</strong></p>
+<p>0x00截断是将上传文件名或路径名中使用ascii码值为0的字符（也就是null）来进行截断。多用在路径和文件名截断中； %00一般用在URL中用于截断url来进行文件包含，两者原理都一样，都是ascll为0的字符，只是形式不同而已； 在上传的时候，当文件系统读到【0x00】时，会认为文件已经结束。利用00截断就是利用程序员在写程序时对文件的上传路径过滤不严格，产生0x00上传截断漏洞； 通过抓包截断将【evil.php.jpg】后面的一个【.】换成【0x00】。在上传的时候，当文件系统读到【0x00】时，会认为文件已经结束，从而将【evil.php.jpg】</p>
+<p>的内容写入到【evil.php】中，从而达到攻击的目的。  </p>
+</li>
+</ul>
+<p><strong>例题：</strong>        </p>
+<ul>
+<li>必须上传成后缀名为php的文件才可以：<br><img src="https://i.imgur.com/Q4Z0wDx.png" alt=""></li>
+</ul>
+<ul>
+<li><p>和上题相同，选择一个文件</p>
+</li>
+<li><p>打开浏览器设置，使用代理服务器，127.0.0.1</p>
+</li>
+<li>然后打开burpsuite，然后在浏览器里点击提交</li>
+<li><p>burpsuite抓包</p>
+<p><img src="https://i.imgur.com/EdvOD8h.png" alt="">   </p>
+</li>
+</ul>
+<ul>
+<li><p>在1处加上1.phpphp.jpg,</p>
+<p>  <img src="https://i.imgur.com/8wbR5xv.png" alt="">   </p>
+</li>
+</ul>
+<ul>
+<li><p>然后点击Hex，在横线的那一行，php后的ascii码值改为00）</p>
+<ol>
+<li><p>返回Raw，检查上一步在Uplads后加1.phpphp.jpg中，第一个php后是否改变</p>
+</li>
+<li><p>然后把包返回给浏览器  </p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="Sqlmap下载、安装"><a href="#Sqlmap下载、安装" class="headerlink" title="Sqlmap下载、安装"></a>Sqlmap下载、安装</h2><ul>
+<li><strong>Sqlmap安装教程网址：</strong><a href="https://jingyan.baidu.com/article/60ccbceb64cc2064cbb19748.html" target="_blank" rel="noopener">Sqlmap安装教程</a>  </li>
+</ul>
+<ul>
+<li><p><strong>安装Sqlmap</strong></p>
+<ol>
+<li><p>下载好的sqlmap，我们将下载的首先解压，然后将目录更改为SQLMap，</p>
+</li>
+<li><p>然后我们将SQLMap复制到Python的安装目录下，新建立一个cmd的快捷方式，并命名为叫“SQLMap”，</p>
+</li>
+<li><p>右键属性，这里需要修改2个地方，一个是“目标”，一个是“起始位置”，</p>
+<p><img src="https://i.imgur.com/k0U0Vzv.png" alt=""></p>
+</li>
+<li><p>双击刚才创建的快捷方式，测试下</p>
+<p><img src="https://i.imgur.com/GsT2Lfi.png" alt=""></p>
+</li>
+<li><p>如果出现下列：</p>
+<p><img src="https://i.imgur.com/0awROcf.png" alt=""></p>
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><strong>注意：</strong>  <ol>
+<li>Python必须是python2，如果用户变量里没有python2，上述最后一步操作则不会成功；</li>
+<li>需要将python2增加到变量里，打开高级系统变量的环境变量，在用户变量里的path里加上python2的路径，并把它置顶。</li>
+</ol>
+</li>
+</ul>
+<h2 id="OWASP-TOP-10"><a href="#OWASP-TOP-10" class="headerlink" title="OWASP TOP 10"></a>OWASP TOP 10</h2><h3 id="注入"><a href="#注入" class="headerlink" title="注入"></a>注入</h3><ul>
+<li>介绍<br>简单来说,注入往往是应用程序缺少对输入进行安全性检查所引起的,攻击者把一些包含指令的数据发送给解释器,解释器会把收到的数据转换成指令执行。常见的注入包括SQL注入，OS Shell , LDAP , Xpath , Hibernate等等,而其中SQL注入尤为常见。这种攻击所造成的后果往往很大，一般整个数据库的信息都能被读取或篡改,通过SQL注入,攻击者甚至能前够获得更多的包括管理员的权限；</li>
+</ul>
+<ul>
+<li>危害<br>注入能导致数据丢失或数据破坏、缺乏可审计性或是拒绝服务。注入漏洞有时甚至能导致完全接管主机。</li>
+</ul>
+
+          
+        
+      
     </div>
-    <footer class="article-footer">
-        
-        <ul class="article-footer-menu">
-            
-                <li><i class="fa fa-calendar"></i>2018-07-31</li>
-            
-            
-        </ul>
-        
-            <a href="/2018/07/31/hello-world/#more" class="article-more-link" >阅读全文&gt;&gt;</a>
-        
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
     </footer>
   </div>
-</article>
+  
+  
+  
+  </article>
 
+
+    
+      
 
   
 
-</section>
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/31/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/31/hello-world/" itemprop="url">
+                  Hello World
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-07-31 08:40:00" itemprop="dateCreated datePublished" datetime="2018-07-31T08:40:00+08:00">2018-07-31</time>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
         
       </div>
-      <footer id="footer">
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-<p>
-    <span id="busuanzi_container_site_uv" style='display:none'>
-        总访客数：<span id="busuanzi_value_site_uv"></span>
-    </span>
-    <span id="busuanzi_container_site_pv" style='display:none'>
-        总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
-</p>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+
+  
+</div>
 
 
-      <p>
-        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
-        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
-      &copy; 2018 John Doe<br>
-      </p>
-    </div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Pisces</a> v6.3.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+	
+    
+
+    
   </div>
-</footer>
-    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script>
-  var mihoConfig = {
-      root: "http://yoursite.com",
-      animate: true,
-      isHome: true,
-      share: true,
-      reward: 1
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
   }
 </script>
-<div class="sidebar">
-    <div id="sidebar-search" title="Search">
-        <i class="fa fa-search"></i>
-    </div>
-    <div id="sidebar-category" title="Categories">
-        <i class="fa fa-book"></i>
-    </div>
-    <div id="sidebar-tag" title="Tags">
-        <i class="fa fa-tags"></i>
-    </div>
-    <div id="sidebar-top">
-        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
-    </div>
-</div>
-<div class="sidebar-menu-box" id="sidebar-menu-box">
-    <div class="sidebar-menu-box-container">
-        <div id="sidebar-menu-box-categories">
-            
-        </div>
-        <div id="sidebar-menu-box-tags">
-            <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/web/" style="font-size: 20px;">web</a> <a href="/tags/web笔记/" style="font-size: 20px;">web笔记</a>
-        </div>
-    </div>
-    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
-</div>
-<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
-    <div class="mobile-header-menu-container">
-        <span class="title">Menus</span>
-        <ul class="mobile-header-menu-navbar">
-            
-            <li>
-                <a  href="/">
-                    <i class="fa fa-home"></i><span>主页</span>
-                </a>
-            </li>
-            
-            <li>
-                <a  href="/archives">
-                    <i class="fa fa-archive"></i><span>blog</span>
-                </a>
-            </li>
-            
-            <li>
-                <a  href="/about">
-                    <i class="fa fa-user"></i><span>我</span>
-                </a>
-            </li>
-            
-        </ul>
-    </div>
-    <div class="mobile-header-tag-container">
-        <span class="title">Tags</span>
-        <div id="mobile-header-container-tags">
-            <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/web/" style="font-size: 20px;">web</a> <a href="/tags/web笔记/" style="font-size: 20px;">web笔记</a>
-        </div>
-    </div>
-</div>
-<div class="search-wrap">
-    <span class="search-close">&times;</span>
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-            <i class="icon icon-lg icon-chevron-left"></i>
-        </a>
-        <input class="search-field" placeholder="Search..." id="keywords">
-        <a id="search-submit" href="javascript:;">
-            <i class="fa fa-search"></i>
-        </a>
-    <div class="search-container" id="search-container">
-        <ul class="search-result" id="search-result">
-        </ul>
-    </div>
-</div>
-
-<div id="search-tpl">
-    <li class="search-result-item">
-        <a href="{url}" class="search-item-li">
-            <span class="search-item-li-title" title="{title}">{title}</span>
-        </a>
-    </li>
-</div>
-<script src="/js/search.js"></script>
-<script src="/js/main.js"></script>
-
-
-  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
-  <div id="particles"></div>
-  <script src="/js/particles.js"></script>
 
 
 
@@ -624,14 +1616,110 @@ bur...
 
 
 
-  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
-  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
-  <script src="/js/animate.js"></script>
 
 
-  </div>
-  <!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/src/love.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.3.0"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
-
