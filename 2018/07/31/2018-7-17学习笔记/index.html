@@ -8,12 +8,12 @@
   
     <meta name="keywords" content="dingmengxing1,dmx's Blog" />
   
-  <meta name="description" content="DVWA文件上传漏洞1. 使用Burpsuite: 先将木马的扩展名改成一个正常的扩展名，如jpg 上传时使用Burpsuite拦截数据包，将木马的扩展名改为原来的php,即可绕过客户端的验证。例题：  做法：1.点击浏览，选择一文件 2.打开浏览器设置，使用代理服务器，127.0.0.1   3.然后打开burpsuite，然后在浏览器里点击提交 4.burpsuite抓包后，改变文件的扩展名">
+  <meta name="description" content="DVWA文件上传漏洞1. 使用Burpsuite: 先将木马的扩展名改成一个正常的扩展名，如jpg  上传时使用Burpsuite拦截数据包，将木马的扩展名改为原来的php,即可绕过客户端的验证。     例题：  做法 ： 点击浏览，选择一文件   打开浏览器设置，使用代理服务器，127.0.0.1   然后打开burpsuite，然后在浏览器里点击提交 burpsuite抓包后，改变文件的扩展">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2018.7.17学习笔记">
 <meta property="og:url" content="http://yoursite.com/2018/07/31/2018-7-17学习笔记/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="DVWA文件上传漏洞1. 使用Burpsuite: 先将木马的扩展名改成一个正常的扩展名，如jpg 上传时使用Burpsuite拦截数据包，将木马的扩展名改为原来的php,即可绕过客户端的验证。例题：  做法：1.点击浏览，选择一文件 2.打开浏览器设置，使用代理服务器，127.0.0.1   3.然后打开burpsuite，然后在浏览器里点击提交 4.burpsuite抓包后，改变文件的扩展名">
+<meta property="og:description" content="DVWA文件上传漏洞1. 使用Burpsuite: 先将木马的扩展名改成一个正常的扩展名，如jpg  上传时使用Burpsuite拦截数据包，将木马的扩展名改为原来的php,即可绕过客户端的验证。     例题：  做法 ： 点击浏览，选择一文件   打开浏览器设置，使用代理服务器，127.0.0.1   然后打开burpsuite，然后在浏览器里点击提交 burpsuite抓包后，改变文件的扩展">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.imgur.com/FR2D6y9.png">
 <meta property="og:image" content="https://i.imgur.com/teYqQxK.png">
@@ -24,10 +24,10 @@
 <meta property="og:image" content="https://i.imgur.com/k0U0Vzv.png">
 <meta property="og:image" content="https://i.imgur.com/r6gXNk3.png">
 <meta property="og:image" content="https://i.imgur.com/0awROcf.png">
-<meta property="og:updated_time" content="2018-07-31T08:56:04.773Z">
+<meta property="og:updated_time" content="2018-08-01T03:01:31.301Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2018.7.17学习笔记">
-<meta name="twitter:description" content="DVWA文件上传漏洞1. 使用Burpsuite: 先将木马的扩展名改成一个正常的扩展名，如jpg 上传时使用Burpsuite拦截数据包，将木马的扩展名改为原来的php,即可绕过客户端的验证。例题：  做法：1.点击浏览，选择一文件 2.打开浏览器设置，使用代理服务器，127.0.0.1   3.然后打开burpsuite，然后在浏览器里点击提交 4.burpsuite抓包后，改变文件的扩展名">
+<meta name="twitter:description" content="DVWA文件上传漏洞1. 使用Burpsuite: 先将木马的扩展名改成一个正常的扩展名，如jpg  上传时使用Burpsuite拦截数据包，将木马的扩展名改为原来的php,即可绕过客户端的验证。     例题：  做法 ： 点击浏览，选择一文件   打开浏览器设置，使用代理服务器，127.0.0.1   然后打开burpsuite，然后在浏览器里点击提交 burpsuite抓包后，改变文件的扩展">
 <meta name="twitter:image" content="https://i.imgur.com/FR2D6y9.png">
   
   
@@ -143,38 +143,75 @@
       
             
             <h2 id="DVWA文件上传漏洞"><a href="#DVWA文件上传漏洞" class="headerlink" title="DVWA文件上传漏洞"></a>DVWA文件上传漏洞</h2><h3 id="1-使用Burpsuite"><a href="#1-使用Burpsuite" class="headerlink" title="1. 使用Burpsuite:"></a>1. 使用Burpsuite:</h3><ul>
-<li>先将木马的扩展名改成一个正常的扩展名，如jpg</li>
-<li>上传时使用Burpsuite拦截数据包，将木马的扩展名改为原来的php,即可绕过客户端的验证。<br><strong>例题：</strong><br><img src="https://i.imgur.com/FR2D6y9.png" alt=""></li>
+<li><p>先将木马的扩展名改成一个正常的扩展名，如jpg</p>
+</li>
+<li><p>上传时使用Burpsuite拦截数据包，将木马的扩展名改为原来的php,即可绕过客户端的验证。  </p>
+</li>
 </ul>
-<p><strong>做法：</strong><br>1.点击浏览，选择一文件<br><img src="https://i.imgur.com/teYqQxK.png" alt=""></p>
-<p>2.打开浏览器设置，使用代理服务器，127.0.0.1  </p>
-<p>3.然后打开burpsuite，然后在浏览器里点击提交</p>
-<p>4.burpsuite抓包后，改变文件的扩展名<br><img src="https://i.imgur.com/JQl2vEt.png" alt=""></p>
-<p>在上图中的1中把文件的扩展名改为php，然后点击2的forward，把东西返给浏览器。  </p>
-<h3 id="2-白名单检测绕过"><a href="#2-白名单检测绕过" class="headerlink" title="2. 白名单检测绕过"></a>2. 白名单检测绕过</h3><p><strong>（白名单就是只只能上传规定后缀的文件，主要利用截断上传绕过，0x00截断与%00截断）</strong><br>0x00截断是将上传文件名或路径名中使用ascii码值为0的字符（也就是null）来进行截断。多用在路径和文件名截断中； %00一般用在URL中用于截断url来进行文件包含，两者原理都一样，都是ascll为0的字符，只是形式不同而已； 在上传的时候，当文件系统读到【0x00】时，会认为文件已经结束。利用00截断就是利用程序员在写程序时对文件的上传路径过滤不严格，产生0x00上传截断漏洞； 通过抓包截断将【evil.php.jpg】后面的一个【.】换成【0x00】。在上传的时候，当文件系统读到【0x00】时，会认为文件已经结束，从而将【evil.php.jpg】的内容写入到【evil.php】中，从而达到攻击的目的。<br>例题：<br>必须上传成后缀名为php的文件才可以：<br><img src="https://i.imgur.com/Q4Z0wDx.png" alt=""></p>
+<p><strong>例题：</strong><br><img src="https://i.imgur.com/FR2D6y9.png" alt=""></p>
+<ul>
+<li><h3 id="做法-："><a href="#做法-：" class="headerlink" title="做法 ："></a>做法 ：</h3><ol>
+<li>点击浏览，选择一文件<br><img src="https://i.imgur.com/teYqQxK.png" alt="">  </li>
+<li>打开浏览器设置，使用代理服务器，127.0.0.1  </li>
+<li>然后打开burpsuite，然后在浏览器里点击提交</li>
+<li>burpsuite抓包后，改变文件的扩展名  <img src="https://i.imgur.com/JQl2vEt.png" alt=""></li>
+<li>在上图中的1中把文件的扩展名改为php，然后点击2的forward，把东西返给浏览器。  </li>
+</ol>
+</li>
+</ul>
+<h3 id="2-白名单检测绕过"><a href="#2-白名单检测绕过" class="headerlink" title="2. 白名单检测绕过"></a>2. 白名单检测绕过</h3><ul>
+<li><p><strong>（白名单就是只只能上传规定后缀的文件，主要利用截断上传绕过，0x00截断与%00截断）</strong></p>
+<p>0x00截断是将上传文件名或路径名中使用ascii码值为0的字符（也就是null）来进行截断。多用在路径和文件名截断中； %00一般用在URL中用于</p>
+<p>截断url来进行文件包含，两者原理都一样，都是ascll为0的字符，只是形式不同而已； 在上传的时候，当文件系统读到【0x00】时，会认为文</p>
+<p>件已经结束。利用00截断就是利用程序员在写程序时对文件的上传路径过滤不严格，产生0x00上传截断漏洞； 通过抓包截断将</p>
+<p>【evil.php.jpg】后面的一个【.】换成【0x00】。在上传的时候，当文件系统读到【0x00】时，会认为文件已经结束，从而将【evil.php.jpg】<br>的内容写入到【evil.php】中，从而达到攻击的目的。  </p>
+</li>
+</ul>
+<p><strong>例题：</strong>        </p>
+<ul>
+<li>必须上传成后缀名为php的文件才可以：<br><img src="https://i.imgur.com/Q4Z0wDx.png" alt=""></li>
+</ul>
 <ul>
 <li>和上题相同，选择一个文件</li>
 <li>打开浏览器设置，使用代理服务器，127.0.0.1</li>
 <li>然后打开burpsuite，然后在浏览器里点击提交</li>
-<li>burpsuite抓包!<img src="https://i.imgur.com/EdvOD8h.png" alt=""><br>在1处加上1.phpphp.jpg,<img src="https://i.imgur.com/8wbR5xv.png" alt=""><br>然后点击Hex，在横线的那一行，php后的ascii码值改为00）</li>
-<li>返回Raw，检查上一步在Uplads后加1.phpphp.jpg中，第一个php后是否改变</li>
-<li>然后把包返回给浏览器  <h2 id="Sqlmap下载、安装"><a href="#Sqlmap下载、安装" class="headerlink" title="Sqlmap下载、安装"></a>Sqlmap下载、安装</h2>Sqlmap安装教程网址：<a href="https://jingyan.baidu.com/article/60ccbceb64cc2064cbb19748.html" target="_blank" rel="noopener">Sqlmap安装教程</a>  </li>
+<li><p>burpsuite抓包!<img src="https://i.imgur.com/EdvOD8h.png" alt="">   </p>
+<p>在1处加上1.phpphp.jpg,<img src="https://i.imgur.com/8wbR5xv.png" alt="">   </p>
+<p>然后点击Hex，在横线的那一行，php后的ascii码值改为00）</p>
+</li>
+<li><p>返回Raw，检查上一步在Uplads后加1.phpphp.jpg中，第一个php后是否改变</p>
+</li>
+<li><p>然后把包返回给浏览器  </p>
+</li>
 </ul>
-<ol>
-<li>安装Sqlmap</li>
+<h2 id="Sqlmap下载、安装"><a href="#Sqlmap下载、安装" class="headerlink" title="Sqlmap下载、安装"></a>Sqlmap下载、安装</h2><ul>
+<li>Sqlmap安装教程网址：<a href="https://jingyan.baidu.com/article/60ccbceb64cc2064cbb19748.html" target="_blank" rel="noopener">Sqlmap安装教程</a>  </li>
+</ul>
+<ul>
+<li><strong>安装Sqlmap</strong><ol>
+<li>下载好的sqlmap，我们将下载的首先解压，然后将目录更改为SQLMap，</li>
+<li>然后我们将SQLMap复制到Python的安装目录下，新建立一个cmd的快捷方式，并命名为叫“SQLMap”，</li>
+<li>右键属性，这里需要修改2个地方，一个是“目标”，一个是“起始位置”，<img src="https://i.imgur.com/k0U0Vzv.png" alt=""></li>
+<li>双击刚才创建的快捷方式，测试下<img src="https://i.imgur.com/r6gXNk3.png" alt=""></li>
+<li>如果出现下列：<br><img src="https://i.imgur.com/0awROcf.png" alt=""></li>
 </ol>
-<p>下载好的sqlmap，我们将下载的首先解压，然后将目录更改为SQLMap，</p>
-<p>然后我们将SQLMap复制到Python的安装目录下，</p>
-<p>新建立一个cmd的快捷方式，并命名为叫“SQLMap”，</p>
-<p>右键属性，这里需要修改2个地方，一个是“目标”，一个是“起始位置”，</p>
-<p><img src="https://i.imgur.com/k0U0Vzv.png" alt=""></p>
-<p>双击刚才创建的快捷方式，测试下<img src="https://i.imgur.com/r6gXNk3.png" alt=""></p>
-<p>如果出现下列：<br> <img src="https://i.imgur.com/0awROcf.png" alt=""><br><strong>注意：</strong><br>Python必须是python2，如果用户变量里没有python2，上述最后一步操作则不会成功；<br>需要将python2增加到变量里，打开高级系统变量的环境变量，在用户变量里的path里加上python2的路径，并把它置顶。</p>
-<h2 id="OWASP-TOP-10"><a href="#OWASP-TOP-10" class="headerlink" title="OWASP TOP 10"></a>OWASP TOP 10</h2><h3 id="注入"><a href="#注入" class="headerlink" title="注入"></a>注入</h3><p>介绍<br>简单来说,注入往往是应用程序缺少对输入进行安全性检查所引起的,攻击者把一些包含指令的数据发送给解释器,解释器会把收到的数据转换成指令执行。常见的注入包括SQL注入，OS Shell , LDAP , Xpath , Hibernate等等,而其中SQL注入尤为常见。这种攻击所造成的后果往往很大，一般整个数据库的信息都能被读取或篡改,通过SQL注入,攻击者甚至能前够获得更多的包括管理员的权限；<br>危害<br>注入能导致数据丢失或数据破坏、缺乏可审计性或是拒绝服务。注入漏洞有时甚至能导致完全接管主机。</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>注意：</strong><br>Python必须是python2，如果用户变量里没有python2，上述最后一步操作则不会成功；</p>
+<p>需要将python2增加到变量里，打开高级系统变量的环境变量，在用户变量里的path里加上python2的路径，并把它置顶。</p>
+</li>
+</ul>
+<h2 id="OWASP-TOP-10"><a href="#OWASP-TOP-10" class="headerlink" title="OWASP TOP 10"></a>OWASP TOP 10</h2><h3 id="注入"><a href="#注入" class="headerlink" title="注入"></a>注入</h3><ul>
+<li>介绍<br>简单来说,注入往往是应用程序缺少对输入进行安全性检查所引起的,攻击者把一些包含指令的数据发送给解释器,解释器会把收到的数据转换成指令执行。常见的注入包括SQL注入，OS Shell , LDAP , Xpath , Hibernate等等,而其中SQL注入尤为常见。这种攻击所造成的后果往往很大，一般整个数据库的信息都能被读取或篡改,通过SQL注入,攻击者甚至能前够获得更多的包括管理员的权限；</li>
+</ul>
+<ul>
+<li>危害<br>注入能导致数据丢失或数据破坏、缺乏可审计性或是拒绝服务。注入漏洞有时甚至能导致完全接管主机。</li>
+</ul>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年07月31日 16:56</p>
+        <p>最后更新： 2018年08月01日 11:01</p>
         <p>原始链接： <a class="post-url" href="/2018/07/31/2018-7-17学习笔记/" title="2018.7.17学习笔记">http://yoursite.com/2018/07/31/2018-7-17学习笔记/</a></p>
         <footer>
             <a href="http://yoursite.com">
@@ -285,7 +322,7 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#DVWA文件上传漏洞"><span class="post-toc-text">DVWA文件上传漏洞</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-使用Burpsuite"><span class="post-toc-text">1. 使用Burpsuite:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-白名单检测绕过"><span class="post-toc-text">2. 白名单检测绕过</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Sqlmap下载、安装"><span class="post-toc-text">Sqlmap下载、安装</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#OWASP-TOP-10"><span class="post-toc-text">OWASP TOP 10</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#注入"><span class="post-toc-text">注入</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#DVWA文件上传漏洞"><span class="post-toc-text">DVWA文件上传漏洞</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-使用Burpsuite"><span class="post-toc-text">1. 使用Burpsuite:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#做法-："><span class="post-toc-text">做法 ：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-白名单检测绕过"><span class="post-toc-text">2. 白名单检测绕过</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Sqlmap下载、安装"><span class="post-toc-text">Sqlmap下载、安装</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#OWASP-TOP-10"><span class="post-toc-text">OWASP TOP 10</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#注入"><span class="post-toc-text">注入</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
