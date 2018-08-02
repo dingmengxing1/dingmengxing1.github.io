@@ -3,29 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>2018.7.20学习笔记 | dmx’blog</title>
+  <title>云起 | dmx’blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="dingmengxing1,dmx's Blog" />
   
-  <meta name="description" content="php $GLOBALS  可以获得当前页面里的全部变量。  $_SERVER">
-<meta name="keywords" content="web笔记">
-<meta property="og:type" content="article">
-<meta property="og:title" content="2018.7.20学习笔记">
-<meta property="og:url" content="http://yoursite.com/2018/08/01/2018-7-20学习笔记/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="云起">
+<meta property="og:url" content="http://yoursite.com/2018/08/02/云起-1/index.html">
 <meta property="og:site_name" content="dmx’blog">
-<meta property="og:description" content="php $GLOBALS  可以获得当前页面里的全部变量。  $_SERVER">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.imgur.com/w8idLJP.png">
-<meta property="og:image" content="https://i.imgur.com/y0FANHC.png">
-<meta property="og:image" content="https://i.imgur.com/zIzRI3o.png">
-<meta property="og:image" content="https://i.imgur.com/GIFhOki.png">
-<meta property="og:image" content="https://i.imgur.com/YjiuMN7.png">
-<meta property="og:updated_time" content="2018-08-01T12:41:12.826Z">
+<meta property="og:updated_time" content="2018-08-02T10:03:34.202Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2018.7.20学习笔记">
-<meta name="twitter:description" content="php $GLOBALS  可以获得当前页面里的全部变量。  $_SERVER">
-<meta name="twitter:image" content="https://i.imgur.com/w8idLJP.png">
+<meta name="twitter:title" content="云起">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -110,20 +100,20 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-2018-7-20学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-云起-1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      2018.7.20学习笔记
+      云起
     </h1>
     <div class="post-title-bar">
       <ul>
           
         <li>
-          <i class="fa fa-calendar"></i>  2018-08-01
+          <i class="fa fa-calendar"></i>  2018-08-02
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -139,75 +129,11 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <h2 id="php"><a href="#php" class="headerlink" title="php"></a>php</h2><ol>
-<li><p>$GLOBALS </p>
-<p>可以获得当前页面里的全部变量。</p>
-</li>
-<li><p>$_SERVER </p>
-<a id="more"></a>    
-<p>是一个包含了诸如头信息(header)、路径(path)、以及脚本位置(script locations)等等信息的数组。</p>
-</li>
-<li><p>$_FILES </p>
-<p>获取上传文件的信息 </p>
-</li>
-<li><p>$_GET</p>
-<!--more-->
-<p>URL (统一资源定位符 )方式传递数据 </p>
-<ul>
-<li><p>说明：其实就是浏览器的地址栏传递方式， </p>
-</li>
-<li><p>传递方式：URL 地址<strong>?</strong>参数 1=值 1&amp;参数 2=值2…………………………… </p>
-</li>
-<li><p>传递形式：表单的 get 方式和超链接方式 </p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&amp;lt?php</span><br><span class="line">if (isset($_GET[&apos;name&apos;]) and isset($_GET[&apos;password&apos;])) &#123;</span><br><span class="line">    if ($_GET[&apos;name&apos;] == $_GET[&apos;password&apos;])</span><br><span class="line">        echo &apos;&lt;p&gt;Your password can not be your name!&lt;/p&gt;&apos;;</span><br><span class="line">    else if (sha1($_GET[&apos;name&apos;]) === sha1($_GET[&apos;password&apos;]))</span><br><span class="line">      die(&apos;Flag: &apos;.$flag);</span><br><span class="line">    else</span><br><span class="line">        echo &apos;&lt;p&gt;Invalid password.&lt;/p&gt;&apos;;</span><br><span class="line">&#125;</span><br><span class="line">else&#123;</span><br><span class="line">	echo &apos;&lt;p&gt;Login first!&lt;/p&gt;&apos;;</span><br><span class="line">?&amp;gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="web试题"><a href="#web试题" class="headerlink" title="web试题"></a>web试题</h2><ol>
-<li><p>robots了解一下</p>
-<p> <img src="https://i.imgur.com/w8idLJP.png" alt=""></p>
-<p><img src="https://i.imgur.com/y0FANHC.png" alt=""></p>
-<p> 这道题就是查找robots在网页的路径，在地址栏里域的根目录里后面加上robots.txt,即可查找robots，注意，robots.txt必须加到域的根目录后，不能加到子目录里。</p>
-<ul>
-<li><p>正确加上：<a href="http://www.wechall.net/robots.txt" target="_blank" rel="noopener">www.wechall.net/robots.txt</a></p>
-</li>
-<li><p>错误加上：<a href="http://www.wechall.net/challenge/training/www/robots/index.php/robots.txt" target="_blank" rel="noopener">www.wechall.net/challenge/training/www/robots/index.php/robots.txt</a><br>加上之后运行，结果：</p>
-</li>
-</ul>
-<p><img src="https://i.imgur.com/zIzRI3o.png" alt=""></p>
-<p>上述图片里的T0PS3CR3T就是答案。</p>
-</li>
-<li><p>php代码审计</p>
-<p><img src="https://i.imgur.com/GIFhOki.png" alt=""></p>
-<p><img src="https://i.imgur.com/YjiuMN7.png" alt=""></p>
-<p>根据题目，我们先查看一下源代码，发现了源代码中出现了这样一串php代码：</p>
-<p>这串代码的意思是要往浏览器的地址栏里传递name和password，而`if ($_GET[‘name’] == $_GET[‘password’])</p>
-<pre><code>echo &apos;&lt;p&gt;Your password can not be your name!&lt;/p&gt;&apos;;
-</code></pre><p>   这一句的意思是如果我们输入的name和password是相同的，则输出“Your password can not be your name!”，所以password和name的值不</p>
-<p> 相同；</p>
-<p> 而    <code>else if (sha1($_GET[&#39;name&#39;]) === sha1($_GET[&#39;password&#39;]))
-   die(&#39;Flag: &#39;.$flag);</code></p>
-<p> 这一句的意思是name和password的值在用哈西算法编码后值相等，然而每一个消息在经过哈希算法编码之后，都会得到</p>
-<p> 唯一的一一对应的消息摘要，所以只两消息值不相等，那么经过哈希算法后，得到的消息摘要一定不等；上面两句话结</p>
-<p> 合，仿佛是矛盾的，但是哈希算法有个漏洞，它不能用于数组，如果消息是数组，则会返回错误，所以如果name和</p>
-<p> password的值是两个不同的数组，则它俩不等，然而经过sha1()函数后返回的值都是错误，则错误与错误相同，所以应</p>
-<p> 当在地址栏里加入？name[]=a&amp;password[]=b,则可以得到flag。</p>
-<ul>
-<li><p>sha1()详细可见<a href="http://www.w3school.com.cn/php/func_string_sha1.asp" target="_blank" rel="noopener">sha1函数</a></p>
-</li>
-<li><p>哈希算法详见<a href="https://baike.baidu.com/item/SHA1/8812671?fr=aladdin" target="_blank" rel="noopener">安全哈希算法</a></p>
-</li>
-<li><p>$_GET：其实就是浏览器的地址栏传递方式， 传递方式：URL 地址?参数 1=值 1&amp;参数 2=值2……………………………</p>
-</li>
-</ul>
-</li>
-</ol>
-
+            
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年08月01日 20:41</p>
-        <p>原始链接： <a class="post-url" href="/2018/08/01/2018-7-20学习笔记/" title="2018.7.20学习笔记">http://yoursite.com/2018/08/01/2018-7-20学习笔记/</a></p>
+        <p>最后更新： 2018年08月02日 18:03</p>
+        <p>原始链接： <a class="post-url" href="/2018/08/02/云起-1/" title="云起">http://yoursite.com/2018/08/02/云起-1/</a></p>
         <footer>
             <a href="http://yoursite.com">
                 <img src="/images/2.png" alt="d.star">
@@ -264,7 +190,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/08/01/2018-7-20学习笔记/&title=《2018.7.20学习笔记》 — dmx’blog&pic=http://yoursite.comimages/2.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/08/02/云起-1/&title=《云起》 — dmx’blog&pic=http://yoursite.comimages/2.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -274,26 +200,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/08/01/2018-7-20学习笔记/&title=《2018.7.20学习笔记》 — dmx’blog&source=php
-$GLOBALS 
-可以获得当前页面里的全部变量。
-
-$_SERVER " data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/08/02/云起-1/&title=《云起》 — dmx’blog&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/08/01/2018-7-20学习笔记/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/08/02/云起-1/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《2018.7.20学习笔记》 — dmx’blog&url=http://yoursite.com/2018/08/01/2018-7-20学习笔记/&via=http://yoursite.com" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《云起》 — dmx’blog&url=http://yoursite.com/2018/08/02/云起-1/&via=http://yoursite.com" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/08/01/2018-7-20学习笔记/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/08/02/云起-1/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -303,7 +225,7 @@ $_SERVER " data-title="QQ">
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/08/01/2018-7-20学习笔记/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/08/02/云起-1/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -312,13 +234,6 @@ $_SERVER " data-title="QQ">
         <ul class="article-footer-menu">
             
             
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/web笔记/" class="color1">web笔记</a>
-      
-  </li>
-
         </ul>
         
     </footer>
@@ -326,28 +241,12 @@ $_SERVER " data-title="QQ">
 </article>
 
 
-    <aside class="post-toc-pos post-toc-top" id="post-toc">
-        <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#php"><span class="post-toc-text">php</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#web试题"><span class="post-toc-text">web试题</span></a></li></ol>
-        </nav>
-    </aside>
-    
 
 <nav id="article-nav">
   
-    <a href="/2018/08/02/云起/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          云起
-        
-      </span>
-    </a>
   
-  
-    <a href="/2018/08/01/2018-7-19学习笔记/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">2018.7.19学习笔记</span>
+    <a href="/2018/08/02/云起/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">云起</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
