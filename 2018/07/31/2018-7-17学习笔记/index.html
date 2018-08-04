@@ -81,14 +81,15 @@
 
 
 
-<meta name="description" content="1.DVWA文件上传漏洞 2.Sqlmap下载、安装 3.注入">
+<meta name="description" content="云·星  文件上传漏洞是根据抓包进行的一种操作，最近看了一点关于它的知识，并且完成了Sqlmap下载、安装，也了解了一点注入，把自己的得到的一些写到这篇笔记里，希望对自己有帮助……">
 <meta name="keywords" content="web笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2018.7.17学习笔记">
 <meta property="og:url" content="http://yoursite.com/2018/07/31/2018-7-17学习笔记/index.html">
 <meta property="og:site_name" content="d.star">
-<meta property="og:description" content="1.DVWA文件上传漏洞 2.Sqlmap下载、安装 3.注入">
+<meta property="og:description" content="云·星  文件上传漏洞是根据抓包进行的一种操作，最近看了一点关于它的知识，并且完成了Sqlmap下载、安装，也了解了一点注入，把自己的得到的一些写到这篇笔记里，希望对自己有帮助……">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.imgur.com/gCg3YMv.gif">
 <meta property="og:image" content="https://i.imgur.com/FR2D6y9.png">
 <meta property="og:image" content="https://i.imgur.com/teYqQxK.png">
 <meta property="og:image" content="https://i.imgur.com/JQl2vEt.png">
@@ -98,11 +99,11 @@
 <meta property="og:image" content="https://i.imgur.com/k0U0Vzv.png">
 <meta property="og:image" content="https://i.imgur.com/GsT2Lfi.png">
 <meta property="og:image" content="https://i.imgur.com/0awROcf.png">
-<meta property="og:updated_time" content="2018-08-04T11:07:19.532Z">
+<meta property="og:updated_time" content="2018-08-04T11:59:34.936Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2018.7.17学习笔记">
-<meta name="twitter:description" content="1.DVWA文件上传漏洞 2.Sqlmap下载、安装 3.注入">
-<meta name="twitter:image" content="https://i.imgur.com/FR2D6y9.png">
+<meta name="twitter:description" content="云·星  文件上传漏洞是根据抓包进行的一种操作，最近看了一点关于它的知识，并且完成了Sqlmap下载、安装，也了解了一点注入，把自己的得到的一些写到这篇笔记里，希望对自己有帮助……">
+<meta name="twitter:image" content="https://i.imgur.com/gCg3YMv.gif">
 
 
 
@@ -331,7 +332,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  960
+                  1,017
                 </span>
               
 
@@ -347,7 +348,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  4
                 </span>
               
             </div>
@@ -368,7 +369,8 @@
       
 
       
-        <center><br>  <h2>1.DVWA文件上传漏洞<br> 2.Sqlmap下载、安装<br> 3.注入</h2><br></center>
+        <hr>
+<center><br>  <h2>云·星<br>  </h2><br></center><br><h5>文件上传漏洞是根据抓包进行的一种操作，最近看了一点关于它的知识，并且完成了Sqlmap下载、安装，也了解了一点注入，把自己的得到的一些写到这篇笔记里，希望对自己有帮助……<br><center><img src="https://i.imgur.com/gCg3YMv.gif" alt=""></center>
 
 <a id="more"></a>
 <hr>
@@ -466,7 +468,7 @@
 <ul>
 <li>危害<br>注入能导致数据丢失或数据破坏、缺乏可审计性或是拒绝服务。注入漏洞有时甚至能导致完全接管主机。</li>
 </ul>
-
+</h5>
       
     </div>
     
@@ -723,7 +725,105 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">1.DVWA文件上传漏洞 2.Sqlmap下载、安装 3.注入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DVWA文件上传漏洞"><span class="nav-number">2.</span> <span class="nav-text">DVWA文件上传漏洞</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-使用Burpsuite"><span class="nav-number">2.1.</span> <span class="nav-text">1. 使用Burpsuite:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#做法-："><span class="nav-number">2.2.</span> <span class="nav-text">做法 ：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-白名单检测绕过"><span class="nav-number">2.3.</span> <span class="nav-text">2. 白名单检测绕过</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sqlmap下载、安装"><span class="nav-number">3.</span> <span class="nav-text">Sqlmap下载、安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OWASP-TOP-10"><span class="nav-number">4.</span> <span class="nav-text">OWASP TOP 10</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注入"><span class="nav-number">4.1.</span> <span class="nav-text">注入</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">云·星  </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">文件上传漏洞是根据抓包进行的一种操作，最近看了一点关于它的知识，并且完成了Sqlmap下载、安装，也了解了一点注入，把自己的得到的一些写到这篇笔记里，希望对自己有帮助……
+
+
+
+DVWA文件上传漏洞1. 使用Burpsuite:
+先将木马的扩展名改成一个正常的扩展名，如jpg
+
+上传时使用Burpsuite拦截数据包，将木马的扩展名改为原来的php,即可绕过客户端的验证。  
+
+
+例题：
+
+做法 ：
+点击浏览，选择一文件
+  
+
+打开浏览器设置，使用代理服务器，127.0.0.1  
+
+然后打开burpsuite，然后在浏览器里点击提交
+
+burpsuite抓包后，改变文件的扩展名  
+
+
+在上图中的1中把文件的扩展名改为php，然后点击2的forward，把东西返给浏览器。  
+
+
+
+
+2. 白名单检测绕过
+（白名单就是只只能上传规定后缀的文件，主要利用截断上传绕过，0x00截断与%00截断）
+0x00截断是将上传文件名或路径名中使用ascii码值为0的字符（也就是null）来进行截断。多用在路径和文件名截断中； %00一般用在URL中用于截断url来进行文件包含，两者原理都一样，都是ascll为0的字符，只是形式不同而已； 在上传的时候，当文件系统读到【0x00】时，会认为文件已经结束。利用00截断就是利用程序员在写程序时对文件的上传路径过滤不严格，产生0x00上传截断漏洞； 通过抓包截断将【evil.php.jpg】后面的一个【.】换成【0x00】。在上传的时候，当文件系统读到【0x00】时，会认为文件已经结束，从而将【evil.php.jpg】
+的内容写入到【evil.php】中，从而达到攻击的目的。  
+
+
+例题：        
+
+必须上传成后缀名为php的文件才可以：
+
+
+和上题相同，选择一个文件
+
+打开浏览器设置，使用代理服务器，127.0.0.1
+
+然后打开burpsuite，然后在浏览器里点击提交
+burpsuite抓包
+   
+
+
+
+在1处加上1.phpphp.jpg,
+     
+
+
+
+然后点击Hex，在横线的那一行，php后的ascii码值改为00）
+
+返回Raw，检查上一步在Uplads后加1.phpphp.jpg中，第一个php后是否改变
+
+然后把包返回给浏览器  
+
+
+
+
+Sqlmap下载、安装
+Sqlmap安装教程网址：Sqlmap安装教程  
+
+
+安装Sqlmap
+
+下载好的sqlmap，我们将下载的首先解压，然后将目录更改为SQLMap，
+
+然后我们将SQLMap复制到Python的安装目录下，新建立一个cmd的快捷方式，并命名为叫“SQLMap”，
+
+右键属性，这里需要修改2个地方，一个是“目标”，一个是“起始位置”，
+
+
+双击刚才创建的快捷方式，测试下
+
+
+如果出现下列：
+
+
+
+
+
+
+注意：  
+Python必须是python2，如果用户变量里没有python2，上述最后一步操作则不会成功；
+需要将python2增加到变量里，打开高级系统变量的环境变量，在用户变量里的path里加上python2的路径，并把它置顶。
+
+
+
+OWASP TOP 10注入
+介绍简单来说,注入往往是应用程序缺少对输入进行安全性检查所引起的,攻击者把一些包含指令的数据发送给解释器,解释器会把收到的数据转换成指令执行。常见的注入包括SQL注入，OS Shell , LDAP , Xpath , Hibernate等等,而其中SQL注入尤为常见。这种攻击所造成的后果往往很大，一般整个数据库的信息都能被读取或篡改,通过SQL注入,攻击者甚至能前够获得更多的包括管理员的权限；
+
+
+危害注入能导致数据丢失或数据破坏、缺乏可审计性或是拒绝服务。注入漏洞有时甚至能导致完全接管主机。
+
+</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DVWA文件上传漏洞"><span class="nav-number">2.</span> <span class="nav-text">DVWA文件上传漏洞</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-使用Burpsuite"><span class="nav-number">2.1.</span> <span class="nav-text">1. 使用Burpsuite:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#做法-："><span class="nav-number">2.2.</span> <span class="nav-text">做法 ：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-白名单检测绕过"><span class="nav-number">2.3.</span> <span class="nav-text">2. 白名单检测绕过</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sqlmap下载、安装"><span class="nav-number">3.</span> <span class="nav-text">Sqlmap下载、安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OWASP-TOP-10"><span class="nav-number">4.</span> <span class="nav-text">OWASP TOP 10</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注入"><span class="nav-number">4.1.</span> <span class="nav-text">注入</span></a></li></ol></li></ol></div>
             
 
           </div>
