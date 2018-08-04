@@ -89,29 +89,16 @@
     <link href="http://yoursite.com/2018/08/01/2018-7-18%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2018/08/01/2018-7-18学习笔记/</id>
     <published>2018-08-01T02:28:31.000Z</published>
-    <updated>2018-08-01T12:37:26.442Z</updated>
+    <updated>2018-08-04T10:58:08.846Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;burp实现弱密码破解&quot;&gt;&lt;a href=&quot;#burp实现弱密码破解&quot; class=&quot;headerlink&quot; title=&quot;burp实现弱密码破解&quot;&gt;&lt;/a&gt;burp实现弱密码破解&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;先打开你的burpsuit，浏览器设置为代理服务器（代理：127.0.0.1，端口：8080）  &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;在网上随意找到一个网站，随意输入账号和密码，点击登录&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;burp抓包成功后，鼠标右击，点击send to Intruder(发送到入侵者)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;在Intruder—-Positions中，标记要攻击的位置，选择攻击模式&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;然后在Intruder—payloads(有效负载)中，选择每个攻击位置的有效负载(即添加字典)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;最后点击(最上边一栏)Intruder—-start attack,即开始攻击&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
+      &lt;center&gt;&lt;br&gt;  &lt;h2&gt;burp实现弱密码破解&lt;br&gt; burpsuit的四种攻击类型 &lt;/h2&gt;&lt;br&gt;&lt;/center&gt;
     
     </summary>
     
     
-      <category term="web" scheme="http://yoursite.com/tags/web/"/>
+      <category term="web笔记" scheme="http://yoursite.com/tags/web%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -138,21 +125,16 @@
     <link href="http://yoursite.com/2018/07/31/2018-7-17%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2018/07/31/2018-7-17学习笔记/</id>
     <published>2018-07-31T08:25:44.000Z</published>
-    <updated>2018-08-01T12:36:03.069Z</updated>
+    <updated>2018-08-04T10:58:19.996Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;DVWA文件上传漏洞&quot;&gt;&lt;a href=&quot;#DVWA文件上传漏洞&quot; class=&quot;headerlink&quot; title=&quot;DVWA文件上传漏洞&quot;&gt;&lt;/a&gt;DVWA文件上传漏洞&lt;/h2&gt;&lt;h3 id=&quot;1-使用Burpsuite&quot;&gt;&lt;a href=&quot;#1-使用Burpsuite&quot; class=&quot;headerlink&quot; title=&quot;1. 使用Burpsuite:&quot;&gt;&lt;/a&gt;1. 使用Burpsuite:&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;先将木马的扩展名改成一个正常的扩展名，如jpg&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;上传时使用Burpsuite拦截数据包，将木马的扩展名改为原来的php,即可绕过客户端的验证。  &lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+      &lt;center&gt;&lt;br&gt;  &lt;h2&gt;DVWA文件上传漏洞&lt;br&gt; Sqlmap下载、安装&lt;br&gt; 注入&lt;/h2&gt;&lt;br&gt;&lt;/center&gt;
     
     </summary>
     
     
-      <category term="web" scheme="http://yoursite.com/tags/web/"/>
+      <category term="web笔记" scheme="http://yoursite.com/tags/web%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
