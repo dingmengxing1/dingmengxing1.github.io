@@ -81,23 +81,24 @@
 
 
 
-<meta name="description" content="1.burp实现弱密码破解 2.burpsuit的四种攻击类型">
+<meta name="description" content="云·星  burp弱密码破解是个挺好玩的的东西，今天学了之后感觉很开心，就把一些知识记了下来……">
 <meta name="keywords" content="web笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2018.7.18学习笔记">
 <meta property="og:url" content="http://yoursite.com/2018/08/01/2018-7-18学习笔记/index.html">
 <meta property="og:site_name" content="d.star">
-<meta property="og:description" content="1.burp实现弱密码破解 2.burpsuit的四种攻击类型">
+<meta property="og:description" content="云·星  burp弱密码破解是个挺好玩的的东西，今天学了之后感觉很开心，就把一些知识记了下来……">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.imgur.com/gCg3YMv.gif">
 <meta property="og:image" content="https://i.imgur.com/3GRU5Of.png">
 <meta property="og:image" content="https://i.imgur.com/5zEbMnj.png">
 <meta property="og:image" content="https://i.imgur.com/iogKYgb.png">
 <meta property="og:image" content="https://i.imgur.com/E1GJCjq.png">
-<meta property="og:updated_time" content="2018-08-04T11:08:10.682Z">
+<meta property="og:updated_time" content="2018-08-04T12:25:37.486Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2018.7.18学习笔记">
-<meta name="twitter:description" content="1.burp实现弱密码破解 2.burpsuit的四种攻击类型">
-<meta name="twitter:image" content="https://i.imgur.com/3GRU5Of.png">
+<meta name="twitter:description" content="云·星  burp弱密码破解是个挺好玩的的东西，今天学了之后感觉很开心，就把一些知识记了下来……">
+<meta name="twitter:image" content="https://i.imgur.com/gCg3YMv.gif">
 
 
 
@@ -326,7 +327,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  449
+                  469
                 </span>
               
 
@@ -363,7 +364,8 @@
       
 
       
-        <center><br>  <h2>1.burp实现弱密码破解<br> 2.burpsuit的四种攻击类型 </h2><br></center>
+        <hr>
+<center><br>  <h2>云·星<br>  </h2><br></center><br><h5>burp弱密码破解是个挺好玩的的东西，今天学了之后感觉很开心，就把一些知识记了下来……<br><center><img src="https://i.imgur.com/gCg3YMv.gif" alt=""></center>
 
 <a id="more"></a>
 <hr>
@@ -411,7 +413,7 @@
 <p><img src="https://i.imgur.com/E1GJCjq.png" alt=""></p>
 </li>
 </ol>
-
+</h5>
       
     </div>
     
@@ -668,7 +670,55 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">1.burp实现弱密码破解 2.burpsuit的四种攻击类型 </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#burp实现弱密码破解"><span class="nav-number">2.</span> <span class="nav-text">burp实现弱密码破解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#burpsuit的四种攻击类型"><span class="nav-number">3.</span> <span class="nav-text">burpsuit的四种攻击类型</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">云·星  </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">burp弱密码破解是个挺好玩的的东西，今天学了之后感觉很开心，就把一些知识记了下来……
+
+
+
+burp实现弱密码破解
+先打开你的burpsuit，浏览器设置为代理服务器（代理：127.0.0.1，端口：8080）  
+
+在网上随意找到一个网站，随意输入账号和密码，点击登录
+
+burp抓包成功后，鼠标右击，点击send to Intruder(发送到入侵者)
+
+在Intruder—-Positions中，标记要攻击的位置，选择攻击模式
+
+然后在Intruder—payloads(有效负载)中，选择每个攻击位置的有效负载(即添加字典)
+
+最后点击(最上边一栏)Intruder—-start attack,即开始攻击
+
+
+
+
+详细操作网址：https://jingyan.baidu.com/album/ca41422f054c881eae99eda0.html?picindex=2
+
+burpsuit的四种攻击类型
+Sniper（狙击手模式）
+ 使用一组payload，一次只能用一个payload位置，即最后出来的结果中只会有一组payload，用完
+ 字典里所有元素；如果标记了多个位置，则也只会出现一组payload，但里面会包含所有标记位置。
+
+标记了一个位置：
+
+
+标记了多个位置：
+    
+
+
+
+Battering ram（攻城锤模式）
+攻城锤模式与狙击手模式类似的地方是，同样只使用一个payload集合，不同的地方在于每次攻击都是替换所有payload标记位置，而狙击手
+模式每次只能替换一个payload标记位置
+
+Pitchfork（草叉模式）
+使用多组payload集合，每个标记位置都可以使用不同的payload组，如果有两个位置A和B,则A1对应B1，A2对应B2……An对应Bn。
+
+
+Cluster bomb（集束炸弹模式）
+使用多组payload集合，与Pitchfork不同的是，如果有两个位置A和B，则A1对应B1…..Bn,A2对应B1……B2,……An对应B1…….Bn。
+
+
+
+</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#burp实现弱密码破解"><span class="nav-number">2.</span> <span class="nav-text">burp实现弱密码破解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#burpsuit的四种攻击类型"><span class="nav-number">3.</span> <span class="nav-text">burpsuit的四种攻击类型</span></a></li></ol></div>
             
 
           </div>

@@ -27,7 +27,7 @@
   <entry>
     <title><![CDATA[2018.7.18学习笔记]]></title>
     <url>%2F2018%2F08%2F01%2F2018-7-18%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%2F</url>
-    <content type="text"><![CDATA[1.burp实现弱密码破解 2.burpsuit的四种攻击类型 burp实现弱密码破解 先打开你的burpsuit，浏览器设置为代理服务器（代理：127.0.0.1，端口：8080） 在网上随意找到一个网站，随意输入账号和密码，点击登录 burp抓包成功后，鼠标右击，点击send to Intruder(发送到入侵者) 在Intruder—-Positions中，标记要攻击的位置，选择攻击模式 然后在Intruder—payloads(有效负载)中，选择每个攻击位置的有效负载(即添加字典) 最后点击(最上边一栏)Intruder—-start attack,即开始攻击 详细操作网址：https://jingyan.baidu.com/album/ca41422f054c881eae99eda0.html?picindex=2 burpsuit的四种攻击类型 Sniper（狙击手模式） 使用一组payload，一次只能用一个payload位置，即最后出来的结果中只会有一组payload，用完 字典里所有元素；如果标记了多个位置，则也只会出现一组payload，但里面会包含所有标记位置。 标记了一个位置： 标记了多个位置： Battering ram（攻城锤模式） 攻城锤模式与狙击手模式类似的地方是，同样只使用一个payload集合，不同的地方在于每次攻击都是替换所有payload标记位置，而狙击手 模式每次只能替换一个payload标记位置 Pitchfork（草叉模式） 使用多组payload集合，每个标记位置都可以使用不同的payload组，如果有两个位置A和B,则A1对应B1，A2对应B2……An对应Bn。 Cluster bomb（集束炸弹模式） 使用多组payload集合，与Pitchfork不同的是，如果有两个位置A和B，则A1对应B1…..Bn,A2对应B1……B2,……An对应B1…….Bn。]]></content>
+    <content type="text"><![CDATA[云·星 burp弱密码破解是个挺好玩的的东西，今天学了之后感觉很开心，就把一些知识记了下来…… burp实现弱密码破解 先打开你的burpsuit，浏览器设置为代理服务器（代理：127.0.0.1，端口：8080） 在网上随意找到一个网站，随意输入账号和密码，点击登录 burp抓包成功后，鼠标右击，点击send to Intruder(发送到入侵者) 在Intruder—-Positions中，标记要攻击的位置，选择攻击模式 然后在Intruder—payloads(有效负载)中，选择每个攻击位置的有效负载(即添加字典) 最后点击(最上边一栏)Intruder—-start attack,即开始攻击 详细操作网址：https://jingyan.baidu.com/album/ca41422f054c881eae99eda0.html?picindex=2 burpsuit的四种攻击类型 Sniper（狙击手模式） 使用一组payload，一次只能用一个payload位置，即最后出来的结果中只会有一组payload，用完 字典里所有元素；如果标记了多个位置，则也只会出现一组payload，但里面会包含所有标记位置。 标记了一个位置： 标记了多个位置： Battering ram（攻城锤模式） 攻城锤模式与狙击手模式类似的地方是，同样只使用一个payload集合，不同的地方在于每次攻击都是替换所有payload标记位置，而狙击手 模式每次只能替换一个payload标记位置 Pitchfork（草叉模式） 使用多组payload集合，每个标记位置都可以使用不同的payload组，如果有两个位置A和B,则A1对应B1，A2对应B2……An对应Bn。 Cluster bomb（集束炸弹模式） 使用多组payload集合，与Pitchfork不同的是，如果有两个位置A和B，则A1对应B1…..Bn,A2对应B1……B2,……An对应B1…….Bn。]]></content>
       <tags>
         <tag>web笔记</tag>
       </tags>
@@ -35,7 +35,7 @@
   <entry>
     <title><![CDATA[python---敏感词跳过]]></title>
     <url>%2F2018%2F08%2F01%2Fpython-%E6%95%8F%E6%84%9F%E8%AF%8D%E8%B7%B3%E8%BF%87%2F</url>
-    <content type="text"><![CDATA[云·星 jintian…… 敏感词跳过题目：读取敏感词文本文件filter.txt,里面存在敏感词，当你输入一段话如果包含敏感字，则用*代替敏感字。 filter.txt文件 黑产，网马，暗链，挖矿 python代码import sys m = [] print(&quot;请输入一段话：&quot;) n = input() with open(&quot;filter.txt&quot;,&quot;r&quot;)as x : s = x.read() for i in s: if i == &quot;\n&quot; or i == &quot;，&quot;: pass else: m.append(i) for i in n: for j in m: s = 0 if i == j: print(&quot;*&quot;,end = &apos;&apos;) s += 1 break if s == 0: print(i,end = &apos;&apos;) 解题思路 看到这的题时，我们肯定是要把txt文件里的文字，与你输入的话里的字相比较，如果相同，则换掉，在此之前，我们要把逗号去掉。去掉逗号，先定义一个列表，把文件里的元素加入列表里，除了’,’和’/n’除外。 得到列表之后，把列表里的元素与输入的文字相比，相同的，换掉。]]></content>
+    <content type="text"><![CDATA[云·星 今天看到了一道python题，敏感字跳过，做的时候感觉不太清楚，问了之后，谢了做题的步骤…… 敏感词跳过题目：读取敏感词文本文件filter.txt,里面存在敏感词，当你输入一段话如果包含敏感字，则用*代替敏感字。 filter.txt文件 黑产，网马，暗链，挖矿 python代码import sys m = [] print(&quot;请输入一段话：&quot;) n = input() with open(&quot;filter.txt&quot;,&quot;r&quot;)as x : s = x.read() for i in s: if i == &quot;\n&quot; or i == &quot;，&quot;: pass else: m.append(i) for i in n: for j in m: s = 0 if i == j: print(&quot;*&quot;,end = &apos;&apos;) s += 1 break if s == 0: print(i,end = &apos;&apos;) 解题思路 看到这的题时，我们肯定是要把txt文件里的文字，与你输入的话里的字相比较，如果相同，则换掉，在此之前，我们要把逗号去掉。去掉逗号，先定义一个列表，把文件里的元素加入列表里，除了’,’和’/n’除外。 得到列表之后，把列表里的元素与输入的文字相比，相同的，换掉。]]></content>
       <tags>
         <tag>python</tag>
       </tags>
