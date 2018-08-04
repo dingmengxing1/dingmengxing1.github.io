@@ -45,15 +45,11 @@
     <link href="http://yoursite.com/2018/08/01/2018-7-20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2018/08/01/2018-7-20学习笔记/</id>
     <published>2018-08-01T08:00:19.000Z</published>
-    <updated>2018-08-01T12:41:12.826Z</updated>
+    <updated>2018-08-04T11:05:28.516Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;php&quot;&gt;&lt;a href=&quot;#php&quot; class=&quot;headerlink&quot; title=&quot;php&quot;&gt;&lt;/a&gt;php&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;$GLOBALS &lt;/p&gt;
-&lt;p&gt;可以获得当前页面里的全部变量。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;$_SERVER &lt;/p&gt;
+      &lt;center&gt;&lt;br&gt;  &lt;h2&gt;1.php&lt;br&gt; 2.web试题&lt;br&gt;       &lt;/h2&gt;&lt;br&gt;robots了解一下&lt;br&gt;php代码审计&lt;br&gt;&lt;/center&gt;
     
     </summary>
     
@@ -67,15 +63,11 @@
     <link href="http://yoursite.com/2018/08/01/2018-7-19%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2018/08/01/2018-7-19学习笔记/</id>
     <published>2018-08-01T05:48:27.000Z</published>
-    <updated>2018-08-01T12:42:08.616Z</updated>
+    <updated>2018-08-04T11:02:40.097Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;网站语言代码&quot;&gt;&lt;a href=&quot;#网站语言代码&quot; class=&quot;headerlink&quot; title=&quot;网站语言代码&quot;&gt;&lt;/a&gt;网站语言代码&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;en-gb&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;英语英国&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;en-US&lt;/strong&gt;&lt;/p&gt;
+      &lt;center&gt;&lt;br&gt;  &lt;h2&gt;1.burp网站语言代码&lt;br&gt; 2.html 基础 &lt;/h2&gt;&lt;br&gt;&lt;/center&gt;
     
     </summary>
     
@@ -89,11 +81,11 @@
     <link href="http://yoursite.com/2018/08/01/2018-7-18%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2018/08/01/2018-7-18学习笔记/</id>
     <published>2018-08-01T02:28:31.000Z</published>
-    <updated>2018-08-04T10:58:08.846Z</updated>
+    <updated>2018-08-04T11:02:32.961Z</updated>
     
     <summary type="html">
     
-      &lt;center&gt;&lt;br&gt;  &lt;h2&gt;burp实现弱密码破解&lt;br&gt; burpsuit的四种攻击类型 &lt;/h2&gt;&lt;br&gt;&lt;/center&gt;
+      &lt;center&gt;&lt;br&gt;  &lt;h2&gt;1.burp实现弱密码破解&lt;br&gt; 2.burpsuit的四种攻击类型 &lt;/h2&gt;&lt;br&gt;&lt;/center&gt;
     
     </summary>
     
@@ -107,11 +99,11 @@
     <link href="http://yoursite.com/2018/08/01/python-%E6%95%8F%E6%84%9F%E8%AF%8D%E8%B7%B3%E8%BF%87/"/>
     <id>http://yoursite.com/2018/08/01/python-敏感词跳过/</id>
     <published>2018-08-01T00:07:49.000Z</published>
-    <updated>2018-08-01T12:39:18.188Z</updated>
+    <updated>2018-08-04T11:06:17.421Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;敏感词跳过&quot;&gt;&lt;a href=&quot;#敏感词跳过&quot; class=&quot;headerlink&quot; title=&quot;敏感词跳过&quot;&gt;&lt;/a&gt;敏感词跳过&lt;/h2&gt;&lt;h3 id=&quot;题目：&quot;&gt;&lt;a href=&quot;#题目：&quot; class=&quot;headerlink&quot; title=&quot;题目：&quot;&gt;&lt;/a&gt;题目：&lt;/h3&gt;&lt;p&gt;读取敏感词文本文件filter.txt,里面存在敏感词，当你输入一段话如果包含敏感字，则用*代替敏感字。   &lt;/p&gt;
+      &lt;center&gt;&lt;br&gt;  &lt;h2&gt;敏感词跳过&lt;br&gt;  &lt;/h2&gt;&lt;br&gt;&lt;/center&gt;
     
     </summary>
     
@@ -125,11 +117,11 @@
     <link href="http://yoursite.com/2018/07/31/2018-7-17%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2018/07/31/2018-7-17学习笔记/</id>
     <published>2018-07-31T08:25:44.000Z</published>
-    <updated>2018-08-04T10:58:19.996Z</updated>
+    <updated>2018-08-04T11:02:35.639Z</updated>
     
     <summary type="html">
     
-      &lt;center&gt;&lt;br&gt;  &lt;h2&gt;DVWA文件上传漏洞&lt;br&gt; Sqlmap下载、安装&lt;br&gt; 注入&lt;/h2&gt;&lt;br&gt;&lt;/center&gt;
+      &lt;center&gt;&lt;br&gt;  &lt;h2&gt;1.DVWA文件上传漏洞&lt;br&gt; 2.Sqlmap下载、安装&lt;br&gt; 3.注入&lt;/h2&gt;&lt;br&gt;&lt;/center&gt;
     
     </summary>
     
