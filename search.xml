@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[一个python爬虫小程序]]></title>
+    <url>%2F2018%2F08%2F07%2F%E4%B8%80%E4%B8%AApython%E7%88%AC%E8%99%AB%E5%B0%8F%E7%A8%8B%E5%BA%8F%2F</url>
+    <content type="text"><![CDATA[云·星 这几天一直在学爬虫，一直感觉不太理解，今天看了一道小题，自己做了出来，感觉很开心，记录下来…… 题目 网址:http://120.24.86.145:8002/qiumingshan/ 打开后出现： &gt; 亲请在2s内计算老司机的车速是多少 1161078706+780472638*1570389353-638524839+134952026-1770317881-547144653-2047462943-581822100*1149577687+1692914613=?; 发现没刷新一次都会有不同的数据出现，所以要想在两秒钟计算出来，我们需要些一个python脚本 第一步先把网页爬下来： import urllib.request from bs4 import BeautifulSoup page = urllib.request.urlopen(&apos;http://120.24.86.145:8002/qiumingshan/&apos;) 第二步读取网页源代码 ： html = page.read() 第三步找到我们想要的字符串： 先看一下网页源代码： &lt;head&gt; &lt;title&gt;下面的表达式的值是秋名山的车速&lt;/title&gt; &lt;meta charset=&quot;UTF-8&quot;&gt; &lt;/head&gt; &lt;p&gt;亲请在2s内计算老司机的车速是多少&lt;/p&gt; &lt;div&gt;1161078706+780472638*1570389353-638524839+134952026-1770317881-547144653-2047462943-581822100*1149577687+1692914613=?;&lt;/div&gt; &lt;style&gt; div,p{ text-align: center; margin: 0 auto; } &lt;/style&gt; 我们发现我们要找的东西在div标签里，所以我们要获取div标签，并把它转化为字符串： soup = BeautifulSoup(html, &quot;html.parser&quot;) spans = str(soup.find(&apos;div&apos;)) 运行之后，我们发现它还不是我们要找到的，它的里面含有其它的字符: &lt;div&gt;2031286773+8947434+1253459624+2058437398+2083031208-294946053-1977124275*1753449552*1522247455+160588209+766176058=?;&lt;/div&gt; 所以我们要截取字符串： a = spans[:-9] b = a[5:] 找到我们想要的字符串后，计算就好了，因为这是一个字符串，所以，要用到eval()函数：print(eval(b)) 整个脚本合并： import urllib.request from bs4 import BeautifulSoup page = urllib.request.urlopen(&apos;http://120.24.86.145:8002/qiumingshan/&apos;) html = page.read() soup = BeautifulSoup(html, &quot;html.parser&quot;) spans = str(soup.find(&apos;div&apos;)) print(spans) a = spans[:-9] b = a[5:] print(eval(b)) 知识链接： 爬取网页 字符串截取 python爬虫：使用BeautifulSoup进行查找 Python eval() 函数]]></content>
+      <tags>
+        <tag>python爬虫</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[云起]]></title>
     <url>%2F2018%2F08%2F02%2F%E4%BA%91%E8%B5%B7%2F</url>
     <content type="text"><![CDATA[]]></content>
