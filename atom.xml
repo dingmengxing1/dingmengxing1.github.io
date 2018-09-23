@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-08-09T06:52:17.407Z</updated>
+  <updated>2018-09-23T14:35:03.949Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于_POST的web</title>
+    <link href="http://yoursite.com/2018/09/23/%E5%85%B3%E4%BA%8E-POST%E7%9A%84web/"/>
+    <id>http://yoursite.com/2018/09/23/关于-POST的web/</id>
+    <published>2018-09-23T13:44:21.000Z</published>
+    <updated>2018-09-23T14:35:03.949Z</updated>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+&lt;center&gt;&lt;br&gt;  &lt;h2&gt;云·星&lt;br&gt;  &lt;/h2&gt;&lt;br&gt;&lt;/center&gt;&lt;br&gt;&lt;h5&gt;这几天在做web题的时候，遇到一个从未接触过的新知识，虽然技术含量不高，但想把它记下来……&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;center&gt;&lt;img src=&quot;https://i.imgur.com/gCg3YMv.gif&quot; alt=&quot;&quot;&gt;&lt;/center&gt;
+
+
+&lt;hr&gt;
+    
+    </summary>
+    
+    
+      <category term="web" scheme="http://yoursite.com/tags/web/"/>
+    
+  </entry>
   
   <entry>
     <title>2018.7.24学习笔记</title>
