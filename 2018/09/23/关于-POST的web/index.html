@@ -93,7 +93,7 @@
 <meta property="og:image" content="https://i.imgur.com/E7g9JZZ.png">
 <meta property="og:image" content="https://i.imgur.com/ahzAOwP.png">
 <meta property="og:image" content="https://i.imgur.com/aEQrgVH.png">
-<meta property="og:updated_time" content="2018-09-23T14:35:03.949Z">
+<meta property="og:updated_time" content="2018-09-23T14:38:20.530Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于_POST的web">
 <meta name="twitter:description" content="云·星  这几天在做web题的时候，遇到一个从未接触过的新知识，虽然技术含量不高，但想把它记下来……">
@@ -369,7 +369,11 @@
 
 <hr>
 <a id="more"></a>
-<p> ##题目<br>    $what=$_POST[‘what’];<br>    echo $what;<br>    if($what==’flag’)<br>    echo ‘flag{<em>**</em>}’;<br>这道题刚看到时，我查了_POST的用法，在 PHP 中，预定义的 $_POST 变量用于收集来自 method=”post” 的表单中的值。看到这句我有点懵，想了很久不太理解，所以我就去查了资料，查了查别人怎么做，发现是POST传参，它有两种做法，第一是需要浏览器上的插件hackbar，第二是bp抓包。</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><pre><code>$what=$_POST[&apos;what&apos;];
+echo $what;
+if($what==&apos;flag&apos;)
+echo &apos;flag{****}&apos;;
+</code></pre><p>这道题刚看到时，我查了_POST的用法，在 PHP 中，预定义的 $_POST 变量用于收集来自 method=”post” 的表单中的值。看到这句我有点懵，想了很久不太理解，所以我就去查了资料，查了查别人怎么做，发现是POST传参，它有两种做法，第一是需要浏览器上的插件hackbar，第二是bp抓包。</p>
 <ul>
 <li><h3 id="插件hackbar"><a href="#插件hackbar" class="headerlink" title="插件hackbar"></a>插件hackbar</h3><ul>
 <li><p>先安装插件<br><img src="https://i.imgur.com/E7g9JZZ.png" alt=""></p>
@@ -378,14 +382,12 @@
 <li>然后回到题的页面，用F12进入控制台，后面会出来hackbar，<br><img src="https://i.imgur.com/ahzAOwP.png" alt=""><br>   按照上图，选择Post data，上面写网址，下面是what=flag，点击Execute，即可出来flag。</li>
 </ul>
 </li>
-<li><p>###bp抓包</p>
-<ul>
+<li><h3 id="bp抓包"><a href="#bp抓包" class="headerlink" title="bp抓包"></a>bp抓包</h3><ul>
 <li>打开burp suite抓取网页<br><img src="https://i.imgur.com/aEQrgVH.png" alt=""></li>
 <li>然后把lwhat改为what，即可得到flag</li>
 </ul>
 </li>
-<li><p>###知识链接：</p>
-<ul>
+<li><h3 id="知识链接："><a href="#知识链接：" class="headerlink" title="知识链接："></a>知识链接：</h3><ul>
 <li><a href="http://www.runoob.com/php/php-post.html" target="_blank" rel="noopener">_POST用法——菜鸟教程</a></li>
 <li><a href="https://www.waitalone.cn/firefox-plugin-web-penetration-tool.html" target="_blank" rel="noopener">Firefox渗透插件—Web渗透必备工具</a></li>
 </ul>
@@ -649,7 +651,11 @@
 
 
 
- ##题目    $what=$_POST[‘what’];    echo $what;    if($what==’flag’)    echo ‘flag{**}’;这道题刚看到时，我查了_POST的用法，在 PHP 中，预定义的 $_POST 变量用于收集来自 method=”post” 的表单中的值。看到这句我有点懵，想了很久不太理解，所以我就去查了资料，查了查别人怎么做，发现是POST传参，它有两种做法，第一是需要浏览器上的插件hackbar，第二是bp抓包。
+题目$what=$_POST[&#39;what&#39;];
+echo $what;
+if($what==&#39;flag&#39;)
+echo &#39;flag{****}&#39;;
+这道题刚看到时，我查了_POST的用法，在 PHP 中，预定义的 $_POST 变量用于收集来自 method=”post” 的表单中的值。看到这句我有点懵，想了很久不太理解，所以我就去查了资料，查了查别人怎么做，发现是POST传参，它有两种做法，第一是需要浏览器上的插件hackbar，第二是bp抓包。
 
 插件hackbar
 先安装插件
@@ -658,20 +664,18 @@
 然后回到题的页面，用F12进入控制台，后面会出来hackbar，   按照上图，选择Post data，上面写网址，下面是what=flag，点击Execute，即可出来flag。
 
 
-###bp抓包
-
+bp抓包
 打开burp suite抓取网页
 然后把lwhat改为what，即可得到flag
 
 
-###知识链接：
-
+知识链接：
 _POST用法——菜鸟教程
 Firefox渗透插件—Web渗透必备工具
 
 
 
-</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插件hackbar"><span class="nav-number">1.1.</span> <span class="nav-text">插件hackbar</span></a></li></ol></li></ol></div>
+</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题目"><span class="nav-number">2.</span> <span class="nav-text">题目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#插件hackbar"><span class="nav-number">2.1.</span> <span class="nav-text">插件hackbar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bp抓包"><span class="nav-number">2.2.</span> <span class="nav-text">bp抓包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#知识链接："><span class="nav-number">2.3.</span> <span class="nav-text">知识链接：</span></a></li></ol></li></ol></div>
             
 
           </div>

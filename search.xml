@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[关于_POST的web]]></title>
     <url>%2F2018%2F09%2F23%2F%E5%85%B3%E4%BA%8E-POST%E7%9A%84web%2F</url>
-    <content type="text"><![CDATA[云·星 这几天在做web题的时候，遇到一个从未接触过的新知识，虽然技术含量不高，但想把它记下来…… ##题目 $what=$_POST[‘what’]; echo $what; if($what==’flag’) echo ‘flag{**}’;这道题刚看到时，我查了_POST的用法，在 PHP 中，预定义的 $_POST 变量用于收集来自 method=”post” 的表单中的值。看到这句我有点懵，想了很久不太理解，所以我就去查了资料，查了查别人怎么做，发现是POST传参，它有两种做法，第一是需要浏览器上的插件hackbar，第二是bp抓包。 插件hackbar 先安装插件 在搜索栏里搜索hackbar，把它添加到浏览器里 然后回到题的页面，用F12进入控制台，后面会出来hackbar， 按照上图，选择Post data，上面写网址，下面是what=flag，点击Execute，即可出来flag。 ###bp抓包 打开burp suite抓取网页 然后把lwhat改为what，即可得到flag ###知识链接： _POST用法——菜鸟教程 Firefox渗透插件—Web渗透必备工具]]></content>
+    <content type="text"><![CDATA[云·星 这几天在做web题的时候，遇到一个从未接触过的新知识，虽然技术含量不高，但想把它记下来…… 题目$what=$_POST[&apos;what&apos;]; echo $what; if($what==&apos;flag&apos;) echo &apos;flag{****}&apos;; 这道题刚看到时，我查了_POST的用法，在 PHP 中，预定义的 $_POST 变量用于收集来自 method=”post” 的表单中的值。看到这句我有点懵，想了很久不太理解，所以我就去查了资料，查了查别人怎么做，发现是POST传参，它有两种做法，第一是需要浏览器上的插件hackbar，第二是bp抓包。 插件hackbar 先安装插件 在搜索栏里搜索hackbar，把它添加到浏览器里 然后回到题的页面，用F12进入控制台，后面会出来hackbar， 按照上图，选择Post data，上面写网址，下面是what=flag，点击Execute，即可出来flag。 bp抓包 打开burp suite抓取网页 然后把lwhat改为what，即可得到flag 知识链接： _POST用法——菜鸟教程 Firefox渗透插件—Web渗透必备工具]]></content>
       <tags>
         <tag>web</tag>
       </tags>
