@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[文件包含漏洞]]></title>
+    <url>%2F2018%2F09%2F30%2F%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E%E2%80%9C%2F</url>
+    <content type="text"><![CDATA[云·星 今天看到了一道文件包含漏洞的题…… flag在index里 题目链接：http://120.24.86.145:8005/post/ 题目详情： 点击网址得到： 我们观察第二张图片中的url（http://120.24.86.145:8005/post/index.php?file=show.php） 可知，这是一道典型的文件包含漏洞的题，file是提示，看到源码中的include函数，这个表示从外部引入php文件并执行，如果执行不成功，就返回文件的源码。而include的内容是由用户控制的，所以通过我们传递的file参数，是include（）函数引入了index.php的base64编码格式，因为是base64编码格式，所以执行不成功，返回源码，所以我们得到了源码的base64格式，解码即可。如果不进行base64编码传入，就会直接执行，而flag的信息在注释中，是得不到的。所以这里是要用到php的封装协议：php://filter/read=convert.base64-encode/resource=index.php， php://是一种协议名称，php://filter/是一种访问本地文件的协议，/read=convert.base64-encode/表示读取的方式是base64编码后，resource=index.php表示目标文件为index.php。通过传递这个参数可以得到index.php的源码，所以我们在地址栏里加入会得到： 这是一串经过base64加密后的字符，我们用base64解密，会得到： &lt;html&gt; &lt;title&gt;Bugku-ctf&lt;/title&gt; &lt;?php error_reporting(0); if(!$_GET[file]){echo &apos;&lt;a href=&quot;./index.php?file=show.php&quot;&gt;click me? no&lt;/a&gt;&apos;;} $file=$_GET[&apos;file&apos;]; if(strstr($file,&quot;../&quot;)||stristr($file, &quot;tp&quot;)||stristr($file,&quot;input&quot;)||stristr($file,&quot;data&quot;)){ echo &quot;Oh no!&quot;; exit(); } include($file); //flag:flag{edulcni_elif_lacol_si_siht} ?&gt; &lt;/html&gt; 所以：flag{edulcni_elif_lacol_si_siht}，就是我们要的flag。 知识链接：php封装协议]]></content>
+      <tags>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于_POST的web]]></title>
     <url>%2F2018%2F09%2F23%2F%E5%85%B3%E4%BA%8E-POST%E7%9A%84web%2F</url>
     <content type="text"><![CDATA[云·星 这几天在做web题的时候，遇到一个从未接触过的新知识，虽然技术含量不高，但想把它记下来…… 题目$what=$_POST[&apos;what&apos;]; echo $what; if($what==&apos;flag&apos;) echo &apos;flag{****}&apos;; 这道题刚看到时，我查了_POST的用法，在 PHP 中，预定义的 $_POST 变量用于收集来自 method=”post” 的表单中的值。看到这句我有点懵，想了很久不太理解，所以我就去查了资料，查了查别人怎么做，发现是POST传参，它有两种做法，第一是需要浏览器上的插件hackbar，第二是bp抓包。 插件hackbar 先安装插件 在搜索栏里搜索hackbar，把它添加到浏览器里 然后回到题的页面，用F12进入控制台，后面会出来hackbar， 按照上图，选择Post data，上面写网址，下面是what=flag，点击Execute，即可出来flag。 bp抓包 打开burp suite抓取网页 然后把lwhat改为what，即可得到flag 知识链接： _POST用法——菜鸟教程 Firefox渗透插件—Web渗透必备工具]]></content>
