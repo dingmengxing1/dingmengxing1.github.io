@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[萌新赛]]></title>
+    <url>%2F2018%2F10%2F20%2F%E8%90%8C%E6%96%B0%E8%B5%9B%2F</url>
+    <content type="text"><![CDATA[云·星 前几天实验室举行了一次线上比赛，这几天把题目整理一下，今天写一下writeup…… misc11. 题目链接https://pan.baidu.com/s/1r8jquNYSSYeKBM7zEhyU5g 2. 题目解析 打开题目地址下载文件，发现是一张图片，图片上什么都没有，我就尝试改了一下文件格式，把图片改为php或txt个格式，再打开文件，发现flag 3. 步骤 改后缀 打开文件 misc21. 题目链接https://pan.baidu.com/s/1SSgbVCpQ2dQ2l9tIfmKfsg 2. 题目解析题目提示，flag藏在图片里，这应该是图片里隐藏着另外一个文件，我们把图片的格式改为压缩文件，打开后发现里面还有一张图片，并且图片无法查看，把图片改为php或txt文本格式，在最后一行找到了flag。 3. 步骤 图片改格式改为： 把3.zip解压，再把2.png改为2.txt：]]></content>
+      <tags>
+        <tag>web</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[文件包含漏洞]]></title>
     <url>%2F2018%2F09%2F30%2F%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E%E2%80%9C%2F</url>
     <content type="text"><![CDATA[云·星 今天看到了一道文件包含漏洞的题…… flag在index里 题目链接：http://120.24.86.145:8005/post/ 题目详情： 点击网址得到： 我们观察第二张图片中的url（http://120.24.86.145:8005/post/index.php?file=show.php） 可知，这是一道典型的文件包含漏洞的题，file是提示，看到源码中的include函数，这个表示从外部引入php文件并执行，如果执行不成功，就返回文件的源码。而include的内容是由用户控制的，所以通过我们传递的file参数，是include（）函数引入了index.php的base64编码格式，因为是base64编码格式，所以执行不成功，返回源码，所以我们得到了源码的base64格式，解码即可。如果不进行base64编码传入，就会直接执行，而flag的信息在注释中，是得不到的。所以这里是要用到php的封装协议：php://filter/read=convert.base64-encode/resource=index.php， php://是一种协议名称，php://filter/是一种访问本地文件的协议，/read=convert.base64-encode/表示读取的方式是base64编码后，resource=index.php表示目标文件为index.php。通过传递这个参数可以得到index.php的源码，所以我们在地址栏里加入会得到： 这是一串经过base64加密后的字符，我们用base64解密，会得到： &lt;html&gt; &lt;title&gt;Bugku-ctf&lt;/title&gt; &lt;?php error_reporting(0); if(!$_GET[file]){echo &apos;&lt;a href=&quot;./index.php?file=show.php&quot;&gt;click me? no&lt;/a&gt;&apos;;} $file=$_GET[&apos;file&apos;]; if(strstr($file,&quot;../&quot;)||stristr($file, &quot;tp&quot;)||stristr($file,&quot;input&quot;)||stristr($file,&quot;data&quot;)){ echo &quot;Oh no!&quot;; exit(); } include($file); //flag:flag{edulcni_elif_lacol_si_siht} ?&gt; &lt;/html&gt; 所以：flag{edulcni_elif_lacol_si_siht}，就是我们要的flag。 知识链接：php封装协议]]></content>
