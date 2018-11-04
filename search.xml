@@ -3,7 +3,10 @@
   <entry>
     <title><![CDATA[希尔密码]]></title>
     <url>%2F2018%2F11%2F04%2F%E5%B8%8C%E5%B0%94%E5%AF%86%E7%A0%81%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[云·星 密码，密码，希尔密码…… 什么是希尔密码希尔密码（Hill Cipher）是运用基本矩阵论原理的替换密码，由Lester S. Hill在1929年发明。每个字母当作26进制数字：A=0, B=1, C=2… 一串字母当成n维向量，跟一个n×n的矩阵相乘，再将得出的结果MOD26。 怎么解希尔密码这里我们以bugku上的一道题为例： 题目 解题步骤 求5x5的矩阵的逆矩阵A 把EGWYQ化为数字矩阵B 把A与B相乘，得到的矩阵C里面的数化为最简 再把得到的C里的数字化为字母，即得到flag]]></content>
+      <tags>
+        <tag>密码</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[隐写术]]></title>
