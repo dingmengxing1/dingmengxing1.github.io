@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="web笔记," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -81,24 +81,14 @@
 
 
 
-<meta name="description" content="云·星  burp弱密码破解是个挺好玩的的东西，今天学了之后感觉很开心，就把一些知识记了下来……">
-<meta name="keywords" content="web笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2018.7.18学习笔记">
-<meta property="og:url" content="http://yoursite.com/2018/08/01/2018-7-18学习笔记/index.html">
+<meta property="og:title" content="希尔密码">
+<meta property="og:url" content="http://yoursite.com/2018/11/04/希尔密码/index.html">
 <meta property="og:site_name" content="d.star">
-<meta property="og:description" content="云·星  burp弱密码破解是个挺好玩的的东西，今天学了之后感觉很开心，就把一些知识记了下来……">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.imgur.com/gCg3YMv.gif">
-<meta property="og:image" content="https://i.imgur.com/3GRU5Of.png">
-<meta property="og:image" content="https://i.imgur.com/5zEbMnj.png">
-<meta property="og:image" content="https://i.imgur.com/iogKYgb.png">
-<meta property="og:image" content="https://i.imgur.com/E1GJCjq.png">
-<meta property="og:updated_time" content="2018-08-04T13:22:22.772Z">
+<meta property="og:updated_time" content="2018-11-04T06:09:58.639Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2018.7.18学习笔记">
-<meta name="twitter:description" content="云·星  burp弱密码破解是个挺好玩的的东西，今天学了之后感觉很开心，就把一些知识记了下来……">
-<meta name="twitter:image" content="https://i.imgur.com/gCg3YMv.gif">
+<meta name="twitter:title" content="希尔密码">
 
 
 
@@ -128,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/08/01/2018-7-18学习笔记/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/11/04/希尔密码/"/>
 
 
 
 
 
-  <title>2018.7.18学习笔记 | d.star</title>
+  <title>希尔密码 | d.star</title>
   
 
 
@@ -262,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/01/2018-7-18学习笔记/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/04/希尔密码/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="d.star">
@@ -279,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">2018.7.18学习笔记</h1>
+          <h1 class="post-title" itemprop="name headline">希尔密码</h1>
         
 
         <div class="post-meta">
@@ -291,8 +281,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-01T10:28:31+08:00">
-                2018-08-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-04T14:09:58+08:00">
+                2018-11-04
               </time>
             
 
@@ -327,7 +317,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  469
+                  0
                 </span>
               
 
@@ -343,7 +333,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  1
                 </span>
               
             </div>
@@ -364,57 +354,7 @@
       
 
       
-        <hr>
-<center><br>  <h2>云·星<br>  </h2><br></center><br><h5>burp弱密码破解是个挺好玩的的东西，今天学了之后感觉很开心，就把一些知识记了下来……<br><br><br><center><img src="https://i.imgur.com/gCg3YMv.gif" alt=""></center>
-
-
-<hr>
-<a id="more"></a>
-<h2 id="burp实现弱密码破解"><a href="#burp实现弱密码破解" class="headerlink" title="burp实现弱密码破解"></a>burp实现弱密码破解</h2><ol>
-<li><p>先打开你的burpsuit，浏览器设置为代理服务器（代理：127.0.0.1，端口：8080）  </p>
-</li>
-<li><p>在网上随意找到一个网站，随意输入账号和密码，点击登录</p>
-</li>
-<li><p>burp抓包成功后，鼠标右击，点击send to Intruder(发送到入侵者)</p>
-</li>
-<li><p>在Intruder—-Positions中，标记要攻击的位置，选择攻击模式</p>
-</li>
-<li><p>然后在Intruder—payloads(有效负载)中，选择每个攻击位置的有效负载(即添加字典)</p>
-</li>
-<li><p>最后点击(最上边一栏)Intruder—-start attack,即开始攻击</p>
-</li>
-</ol>
-<!--more-->
-<ul>
-<li><strong>详细操作网址：</strong><a href="https://jingyan.baidu.com/album/ca41422f054c881eae99eda0.html?picindex=2" target="_blank" rel="noopener">https://jingyan.baidu.com/album/ca41422f054c881eae99eda0.html?picindex=2</a></li>
-</ul>
-<h2 id="burpsuit的四种攻击类型"><a href="#burpsuit的四种攻击类型" class="headerlink" title="burpsuit的四种攻击类型"></a>burpsuit的四种攻击类型</h2><ol>
-<li><p>Sniper（狙击手模式）</p>
-<p> 使用一组payload，一次只能用一个payload位置，即最后出来的结果中只会有一组payload，用完</p>
-<p> 字典里所有元素；如果标记了多个位置，则也只会出现一组payload，但里面会包含所有标记位置。</p>
-<ol>
-<li><p>标记了一个位置：</p>
-<p><img src="https://i.imgur.com/3GRU5Of.png" alt=""></p>
-</li>
-<li><p>标记了多个位置：</p>
-<p><img src="https://i.imgur.com/5zEbMnj.png" alt="">    </p>
-</li>
-</ol>
-</li>
-<li><p>Battering ram（攻城锤模式）</p>
-<p>攻城锤模式与狙击手模式类似的地方是，同样只使用一个payload集合，不同的地方在于每次攻击都是替换所有payload标记位置，而狙击手</p>
-<p>模式每次只能替换一个payload标记位置</p>
-</li>
-<li><p>Pitchfork（草叉模式）</p>
-<p>使用多组payload集合，每个标记位置都可以使用不同的payload组，如果有两个位置A和B,则A1对应B1，A2对应B2……An对应Bn。</p>
-<p><img src="https://i.imgur.com/iogKYgb.png" alt=""></p>
-</li>
-<li><p>Cluster bomb（集束炸弹模式）</p>
-<p>使用多组payload集合，与Pitchfork不同的是，如果有两个位置A和B，则A1对应B1…..Bn,A2对应B1……B2,……An对应B1…….Bn。</p>
-<p><img src="https://i.imgur.com/E1GJCjq.png" alt=""></p>
-</li>
-</ol>
-</h5>
+        
       
     </div>
     
@@ -438,12 +378,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/web笔记/" rel="tag"><i class="fa fa-tag"></i> web笔记</a>
-          
-        </div>
-      
 
       
       
@@ -453,8 +387,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/01/python-敏感词跳过/" rel="next" title="python---敏感词跳过">
-                <i class="fa fa-chevron-left"></i> python---敏感词跳过
+              <a href="/2018/10/31/隐写术/" rel="next" title="隐写术">
+                <i class="fa fa-chevron-left"></i> 隐写术
               </a>
             
           </div>
@@ -462,10 +396,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/01/2018-7-19学习笔记/" rel="prev" title="2018.7.19学习笔记">
-                2018.7.19学习笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -555,17 +485,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -661,71 +582,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">云·星  </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">burp弱密码破解是个挺好玩的的东西，今天学了之后感觉很开心，就把一些知识记了下来……
-
-
-
-
-burp实现弱密码破解
-先打开你的burpsuit，浏览器设置为代理服务器（代理：127.0.0.1，端口：8080）  
-
-在网上随意找到一个网站，随意输入账号和密码，点击登录
-
-burp抓包成功后，鼠标右击，点击send to Intruder(发送到入侵者)
-
-在Intruder—-Positions中，标记要攻击的位置，选择攻击模式
-
-然后在Intruder—payloads(有效负载)中，选择每个攻击位置的有效负载(即添加字典)
-
-最后点击(最上边一栏)Intruder—-start attack,即开始攻击
-
-
-
-
-详细操作网址：https://jingyan.baidu.com/album/ca41422f054c881eae99eda0.html?picindex=2
-
-burpsuit的四种攻击类型
-Sniper（狙击手模式）
- 使用一组payload，一次只能用一个payload位置，即最后出来的结果中只会有一组payload，用完
- 字典里所有元素；如果标记了多个位置，则也只会出现一组payload，但里面会包含所有标记位置。
-
-标记了一个位置：
-
-
-标记了多个位置：
-    
-
-
-
-Battering ram（攻城锤模式）
-攻城锤模式与狙击手模式类似的地方是，同样只使用一个payload集合，不同的地方在于每次攻击都是替换所有payload标记位置，而狙击手
-模式每次只能替换一个payload标记位置
-
-Pitchfork（草叉模式）
-使用多组payload集合，每个标记位置都可以使用不同的payload组，如果有两个位置A和B,则A1对应B1，A2对应B2……An对应Bn。
-
-
-Cluster bomb（集束炸弹模式）
-使用多组payload集合，与Pitchfork不同的是，如果有两个位置A和B，则A1对应B1…..Bn,A2对应B1……B2,……An对应B1…….Bn。
-
-
-
-</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#burp实现弱密码破解"><span class="nav-number">2.</span> <span class="nav-text">burp实现弱密码破解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#burpsuit的四种攻击类型"><span class="nav-number">3.</span> <span class="nav-text">burpsuit的四种攻击类型</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
