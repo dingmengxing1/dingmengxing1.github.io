@@ -93,7 +93,19 @@
 <meta property="og:image" content="https://i.imgur.com/k07s9OK.png">
 <meta property="og:image" content="https://i.imgur.com/Botadlm.png">
 <meta property="og:image" content="https://i.imgur.com/w6A0i4H.png">
-<meta property="og:updated_time" content="2018-10-31T13:21:26.427Z">
+<meta property="og:image" content="https://i.imgur.com/DoSYDMa.png">
+<meta property="og:image" content="https://i.imgur.com/QDjxFpN.png">
+<meta property="og:image" content="https://i.imgur.com/3ho9Snn.png">
+<meta property="og:image" content="https://i.imgur.com/xgW3vh5.png">
+<meta property="og:image" content="https://i.imgur.com/TzbA4R7.png">
+<meta property="og:image" content="https://i.imgur.com/Uh5GUYg.png">
+<meta property="og:image" content="https://i.imgur.com/CXSpWuk.png">
+<meta property="og:image" content="https://i.imgur.com/bxtiXxt.png">
+<meta property="og:image" content="https://i.imgur.com/gmhpsMh.png">
+<meta property="og:image" content="https://i.imgur.com/9RUd2Lr.png">
+<meta property="og:image" content="https://i.imgur.com/aebevTH.png">
+<meta property="og:image" content="https://i.imgur.com/POS6gzk.png">
+<meta property="og:updated_time" content="2018-11-04T06:01:45.855Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="隐写术">
 <meta name="twitter:description" content="云·星  隐写。这些都是最近遇到的一些知识点，只是我自己了解到的，不是很全面，简单的做个笔记……">
@@ -326,7 +338,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  418
+                  1,166
                 </span>
               
 
@@ -342,7 +354,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  4
                 </span>
               
             </div>
@@ -375,15 +387,76 @@
 <li><h3 id="图片格式改为文档"><a href="#图片格式改为文档" class="headerlink" title="图片格式改为文档"></a>图片格式改为文档</h3>遇到之=只给你一张图片的题，你要有这种常识，尝试着把图片改为文档的格式，有些时候，flag就隐藏在文档中，在文档中搜索flag或ctf，大概就能找到你要的答案。</li>
 <li><h3 id="图片的一部分被隐藏"><a href="#图片的一部分被隐藏" class="headerlink" title="图片的一部分被隐藏"></a>图片的一部分被隐藏</h3><p>有的时候，题目给你的图片，可能是被改变过的图片，它的长或高被更改过，导致有一部分你看不到，这种情况就需要我们用16进制的编辑工具改变它的大小，看到被隐藏的部分。例如:</p>
 <ul>
-<li>一张图片</li>
-</ul>
-<p><img src="https://i.imgur.com/f2MfFRs.png" alt=""></p>
-<ul>
+<li>一张图片<br><img src="https://i.imgur.com/f2MfFRs.png" alt=""></li>
 <li><p>里面什么都没有，我们用16进制编辑工具改变大小<br>原来的：</p>
 <p><img src="https://i.imgur.com/k07s9OK.png" alt=""></p>
 <p>改变之后：<br><img src="https://i.imgur.com/Botadlm.png" alt=""></p>
 </li>
 <li>得到了另外一张<br><img src="https://i.imgur.com/w6A0i4H.png" alt=""></li>
+</ul>
+</li>
+<li><h3 id="图片身上存在条形码"><a href="#图片身上存在条形码" class="headerlink" title="图片身上存在条形码"></a>图片身上存在条形码</h3>有的时候我们得到一张图片，图片上是隐含条形码的，<ul>
+<li>例如：<br><img src="https://i.imgur.com/DoSYDMa.png" alt=""><br>这张图片我们明显的就能感觉斑马身上的条纹图案很像条形码，这就需要我们试着把条形码拼凑出来，再用网上的扫码网站扫一下。</li>
+<li>在线扫描图片条形码二维码<ul>
+<li>网站（<a href="http://https://online-barcode-reader.inliteresearch.com/" target="_blank" rel="noopener">https://online-barcode-reader.inliteresearch.com/</a>）</li>
+<li>怎么用<br><img src="https://i.imgur.com/QDjxFpN.png" alt=""><br>1是选择你要扫描什么类型的码，2是上传你需要扫码的图片，3是读取，即开始扫码。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="图片里面隐藏了另外的文件"><a href="#图片里面隐藏了另外的文件" class="headerlink" title="图片里面隐藏了另外的文件"></a>图片里面隐藏了另外的文件</h3><p>在有些隐写题里，一张图片本身可能没有flag，但是它的里面可能存在另外的图片或文件，这是我们有两种做法：</p>
+<ol>
+<li><p>使用虚拟机linux系统<br>打开linux系统，把文件拖进虚拟机，打开终端，使用<strong>[binwalk 文件]</strong>这条命令查看文件里是否隐含其他文件，如果有，再用<strong>[foremost 文件]</strong>这条命令分离隐含文件：</p>
+</li>
+<li><p>改变文件格式，把图片格式改为压缩包<strong>（不全部适用）</strong><br>有些时候，可能你建立的虚拟机无法查出一些隐含文件，那么用Windows也有一种做法，就是可以把文件改为压缩包格式，再解压，你就会发现压缩包里存在一个新的文件，可能它就是你需要的文件：</p>
+<ul>
+<li><p>改变格式<br>一张图片，改格式<br><img src="https://i.imgur.com/3ho9Snn.png" alt=""><br>改为：<br><img src="https://i.imgur.com/xgW3vh5.png" alt=""></p>
+</li>
+<li><p>把3.zip解压，再把2.png改为2.txt，发现flag：<br><img src="https://i.imgur.com/TzbA4R7.png" alt=""></p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><h3 id="文件中隐含二维码"><a href="#文件中隐含二维码" class="headerlink" title="文件中隐含二维码"></a>文件中隐含二维码</h3><p>这个和条形码的不一样，这种是我们表面看不出来里面存不存在二维码，需要一个图像处理的程序：stegsolve。</p>
+<ul>
+<li>例如下面这张图片：<br><img src="https://i.imgur.com/Uh5GUYg.png" alt=""><br>本身我们是看不出有什么东西的，前几种方法试过之后，我们可以尝试用stegsolve查看里面是否存在二维码</li>
+<li>打开stegsolve<br><img src="https://i.imgur.com/CXSpWuk.png" alt=""></li>
+<li><p>把文件拖进去，开始改变文件</p>
+<ol>
+<li>打开文件<br><img src="https://i.imgur.com/bxtiXxt.png" alt=""></li>
+<li>点击上方图片红色框框里的按钮可以分离图片<br><img src="https://i.imgur.com/gmhpsMh.png" alt=""><br><img src="https://i.imgur.com/9RUd2Lr.png" alt=""><br><img src="https://i.imgur.com/aebevTH.png" alt=""></li>
+<li>最后得到<br><img src="https://i.imgur.com/POS6gzk.png" alt=""><br>所以我们最后可得到一个二维码，（图片里的不是最终的二维码，需要黑白两色换一下），我们可以得到flag。</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>最后……<br>图片    png格式16进制文件头：</p>
+<ul>
+<li><p>（固定）八个字节89 50 4E 47 0D 0A 1A 0A为png的文件头</p>
+</li>
+<li><p>（固定）四个字节00 00 00 0D（即为十进制的13）代表数据块的长度为13</p>
+</li>
+<li><p>（固定）四个字节49 48 44 52（即为ASCII码的IHDR）是文件头数据块的标示（IDCH）</p>
+</li>
+<li><p>（可变）13位数据块（IHDR)</p>
+<ul>
+<li><p>前四个字节代表该图片的宽</p>
+</li>
+<li><p>后四个字节代表该图片的高</p>
+</li>
+<li><p>后五个字节依次为：</p>
+<p>Bit depth、ColorType、Compression method、Filter method、Interlace method</p>
+</li>
+</ul>
+</li>
+<li><p>（可变）剩余四字节为该png的CRC检验码，由从IDCH到IHDR的十七位字节进行crc计算得到。。</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -634,7 +707,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">云·星  </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">隐写。这些都是最近遇到的一些知识点，只是我自己了解到的，不是很全面，简单的做个笔记……</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是隐写"><span class="nav-number">2.</span> <span class="nav-text">什么是隐写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#怎么做隐写的题"><span class="nav-number">3.</span> <span class="nav-text">怎么做隐写的题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#图片格式改为文档"><span class="nav-number">3.1.</span> <span class="nav-text">图片格式改为文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片的一部分被隐藏"><span class="nav-number">3.2.</span> <span class="nav-text">图片的一部分被隐藏</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">云·星  </span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#undefined"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">隐写。这些都是最近遇到的一些知识点，只是我自己了解到的，不是很全面，简单的做个笔记……</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是隐写"><span class="nav-number">2.</span> <span class="nav-text">什么是隐写</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#怎么做隐写的题"><span class="nav-number">3.</span> <span class="nav-text">怎么做隐写的题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#图片格式改为文档"><span class="nav-number">3.1.</span> <span class="nav-text">图片格式改为文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片的一部分被隐藏"><span class="nav-number">3.2.</span> <span class="nav-text">图片的一部分被隐藏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片身上存在条形码"><span class="nav-number">3.3.</span> <span class="nav-text">图片身上存在条形码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片里面隐藏了另外的文件"><span class="nav-number">3.4.</span> <span class="nav-text">图片里面隐藏了另外的文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件中隐含二维码"><span class="nav-number">3.5.</span> <span class="nav-text">文件中隐含二维码</span></a></li></ol></li></ol></div>
             
 
           </div>
