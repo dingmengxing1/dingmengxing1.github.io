@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>d.star</title>
   
-  
+  <subtitle>记录一只小菜鸟的学习历程</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
